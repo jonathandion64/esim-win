@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://esim.win/sitemap.xml
