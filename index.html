@@ -34,6 +34,9 @@
     details summary { list-style: none; }
     details[open] summary .faq-chevron { transform: rotate(180deg); }
     .faq-chevron { transition: transform 0.2s ease; }
+    .plan-row { transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+    .plan-row:hover { box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+    #sticky-bar { transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }
   </style>
   <script type="application/ld+json">
   {
@@ -89,6 +92,25 @@
           View Plans
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
+        <!-- Trust badges -->
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-xs font-semibold text-white">Instant Delivery</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-xs font-semibold text-white">30+ Countries</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-xs font-semibold text-white">From $9.90</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5">
+            <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="text-xs font-semibold text-white">No Contract</span>
+          </div>
+        </div>
       </div>
       <div class="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
@@ -119,74 +141,152 @@
       <!-- 7 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">7 days</p>
       <div class="space-y-2.5 mb-8">
-        <a href="https://www.simoptions.com/checkout/esim/3352408060016/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">5</span> <span class="text-gray-400">GB</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3312305170027/"
+             data-label="5 GB" data-days="7 days" data-price="$9.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">5</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$9.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
 
       <!-- 15 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">15 days</p>
       <div class="space-y-2.5 mb-8">
-        <a href="https://www.simoptions.com/checkout/esim/3526356063671/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">15</span> <span class="text-gray-400">GB</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3526356063671/"
+             data-label="15 GB" data-days="15 days" data-price="$15.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1 flex items-center gap-2">
+            <span><span class="font-bold text-gray-900">15</span> <span class="text-gray-400">GB</span></span>
+            <span class="text-xs font-semibold text-brand-500 bg-orange-50 rounded-full px-2 py-0.5">Popular</span>
+          </span>
           <span class="text-sm"><span class="font-bold text-gray-900">$15.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3526356063672/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3526356063672/"
+             data-label="20 GB" data-days="15 days" data-price="$23.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$23.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
 
       <!-- 30 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">30 days</p>
       <div class="space-y-2.5 mb-8">
-        <a href="https://www.simoptions.com/checkout/esim/8595106658537/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">10</span> <span class="text-gray-400">GB</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/8595106658537/"
+             data-label="10 GB" data-days="30 days" data-price="$21.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">10</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$21.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3561292347756/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3561292347756/"
+             data-label="20 GB" data-days="30 days" data-price="$28.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$28.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/8595106658538/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/8595106658538/"
+             data-label="20 GB" data-days="30 days" data-price="$29.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">20</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$29.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3526356063683/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">30</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3526356063683/"
+             data-label="30 GB" data-days="30 days" data-price="$32.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">30</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$32.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3522405130016/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">60</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3522405130016/"
+             data-label="60 GB" data-days="30 days" data-price="$39.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1 flex items-center gap-2">
+            <span><span class="font-bold text-gray-900">60</span> <span class="text-gray-400">GB</span></span>
+            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 rounded-full px-2 py-0.5">Best Value</span>
+          </span>
           <span class="text-sm"><span class="font-bold text-gray-900">$39.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3526350133054/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">120</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3526350133054/"
+             data-label="120 GB" data-days="30 days" data-price="$59.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">120</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$59.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
 
       <!-- 31 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">31 days</p>
       <div class="space-y-2.5 mb-8">
-        <a href="https://www.simoptions.com/checkout/esim/3561292346865/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">50</span> <span class="text-gray-400">GB</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3561292346865/"
+             data-label="50 GB" data-days="31 days" data-price="$49.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">50</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$49.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
-        <a href="https://www.simoptions.com/checkout/esim/3561292400826/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">100</span> <span class="text-gray-400">GB</span></span>
+        </div>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3561292400826/"
+             data-label="100 GB" data-days="31 days" data-price="$55.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">100</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$55.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
 
       <!-- 60 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">60 days</p>
       <div class="space-y-2.5">
-        <a href="https://www.simoptions.com/checkout/esim/3312306230010/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">50</span> <span class="text-gray-400">GB</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3312306230010/"
+             data-label="50 GB" data-days="60 days" data-price="$49.90" data-tab="standard"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">50</span> <span class="text-gray-400">GB</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$49.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -197,19 +297,31 @@
       <!-- 7 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">7 days</p>
       <div class="space-y-2.5 mb-8">
-        <a href="https://www.simoptions.com/checkout/esim/3352408060016/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">Unlimited</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3352408060016/"
+             data-label="Unlimited" data-days="7 days" data-price="$24.90" data-tab="unlimited"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">Unlimited</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$24.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
 
       <!-- 14 days -->
       <p class="text-sm font-bold text-gray-900 mb-3">14 days</p>
       <div class="space-y-2.5">
-        <a href="https://www.simoptions.com/checkout/esim/3352408060023/" target="_blank" rel="noopener" class="flex items-center justify-between bg-white rounded-xl px-5 py-4 hover:shadow-md transition-shadow border border-transparent hover:border-gray-200">
-          <span class="text-sm"><span class="font-bold text-gray-900">Unlimited</span></span>
+        <div onclick="selectPlan(this)"
+             data-url="https://www.simoptions.com/checkout/esim/3352408060023/"
+             data-label="Unlimited" data-days="14 days" data-price="$39.90" data-tab="unlimited"
+             class="plan-row flex items-center gap-3 bg-white rounded-xl px-5 py-4 cursor-pointer border-2 border-transparent">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="text-sm flex-1"><span class="font-bold text-gray-900">Unlimited</span></span>
           <span class="text-sm"><span class="font-bold text-gray-900">$39.90</span> <span class="text-gray-400">USD</span></span>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -302,7 +414,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-10">
+  <footer class="bg-gray-900 text-gray-400 py-10 pb-32 sm:pb-10">
     <div class="max-w-xl mx-auto px-4 sm:px-6 text-center">
       <a href="/" class="inline-flex items-center gap-2 mb-4">
         <span class="text-lg">🌐</span>
@@ -328,12 +440,57 @@
     </div>
   </footer>
 
+  <!-- Sticky Buy Now Bar -->
+  <div id="sticky-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100 shadow-2xl translate-y-full">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <div class="min-w-0">
+        <p class="text-xs text-gray-400 truncate" id="bar-label">5 GB &middot; 7 days</p>
+        <p class="text-base font-bold text-gray-900" id="bar-price">$9.90</p>
+      </div>
+      <button id="buy-now-btn"
+              class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 active:scale-95 text-white font-semibold text-sm rounded-full transition-all">
+        Buy Now
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </div>
+  </div>
+
   <script>
+    let selectedUrl = '';
+
+    function selectPlan(el) {
+      // Deselect all rows
+      document.querySelectorAll('.plan-row').forEach(function(row) {
+        row.classList.remove('border-brand-500');
+        row.classList.add('border-transparent');
+        var chk = row.querySelector('.plan-check');
+        var ico = row.querySelector('.plan-check-icon');
+        chk.classList.remove('bg-brand-500', 'border-brand-500');
+        chk.classList.add('border-gray-200');
+        ico.classList.add('hidden');
+      });
+      // Select clicked row
+      el.classList.add('border-brand-500');
+      el.classList.remove('border-transparent');
+      var chk = el.querySelector('.plan-check');
+      var ico = el.querySelector('.plan-check-icon');
+      chk.classList.add('bg-brand-500', 'border-brand-500');
+      chk.classList.remove('border-gray-200');
+      ico.classList.remove('hidden');
+      // Update sticky bar
+      selectedUrl = el.dataset.url;
+      document.getElementById('bar-label').textContent = el.dataset.label + ' · ' + el.dataset.days;
+      document.getElementById('bar-price').textContent = el.dataset.price;
+      // Show bar
+      var bar = document.getElementById('sticky-bar');
+      bar.classList.remove('translate-y-full');
+    }
+
     function switchTab(tab) {
-      const standard = document.getElementById('plans-standard');
-      const unlimited = document.getElementById('plans-unlimited');
-      const tabStd = document.getElementById('tab-standard');
-      const tabUnl = document.getElementById('tab-unlimited');
+      var standard = document.getElementById('plans-standard');
+      var unlimited = document.getElementById('plans-unlimited');
+      var tabStd = document.getElementById('tab-standard');
+      var tabUnl = document.getElementById('tab-unlimited');
       if (tab === 'standard') {
         standard.classList.remove('hidden');
         unlimited.classList.add('hidden');
@@ -349,12 +506,35 @@
         tabStd.classList.remove('bg-gray-900', 'text-white');
         tabStd.classList.add('text-gray-500');
       }
+      // Pre-select first plan of new tab
+      var firstPlan = document.querySelector('#plans-' + tab + ' .plan-row');
+      if (firstPlan) selectPlan(firstPlan);
     }
-    document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
-    document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('mobile-menu').classList.add('hidden'); });
-    const navbar = document.getElementById('navbar');
-    new IntersectionObserver(([e]) => navbar.classList.toggle('shadow-sm', !e.isIntersecting), { threshold: 0 }).observe(document.getElementById('hero'));
+
+    document.getElementById('buy-now-btn').addEventListener('click', function() {
+      if (selectedUrl) window.open(selectedUrl, '_blank', 'noopener');
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(function(l) {
+      l.addEventListener('click', function() { document.getElementById('mobile-menu').classList.add('hidden'); });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') document.getElementById('mobile-menu').classList.add('hidden');
+    });
+
+    var navbar = document.getElementById('navbar');
+    new IntersectionObserver(function(entries) {
+      navbar.classList.toggle('shadow-sm', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(document.getElementById('hero'));
+
+    // Pre-select first standard plan on load
+    document.addEventListener('DOMContentLoaded', function() {
+      var firstPlan = document.querySelector('#plans-standard .plan-row');
+      if (firstPlan) selectPlan(firstPlan);
+    });
   </script>
 </body>
 </html>
