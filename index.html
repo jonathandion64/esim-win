@@ -85,6 +85,16 @@
     <div class="relative overflow-hidden" style="background:linear-gradient(135deg,#e85500 0%,#ff6b1a 40%,#ff9a00 100%)">
       <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full opacity-20" style="background:rgba(255,255,255,.25);filter:blur(60px)"></div>
       <div class="absolute -bottom-16 -right-16 w-80 h-80 rounded-full opacity-15" style="background:rgba(255,255,255,.3);filter:blur(50px)"></div>
+      <!-- Airalo-style geometric shapes -->
+      <div class="pointer-events-none select-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="hidden sm:block absolute top-6 right-10 w-14 h-24 rounded-2xl rotate-[22deg]" style="background:rgba(255,255,255,.13)"></div>
+        <div class="hidden sm:block absolute bottom-8 right-28 w-10 h-10 rounded-xl rotate-[12deg]" style="background:rgba(255,255,255,.10)"></div>
+        <div class="hidden md:block absolute top-10 right-36 w-7 h-7 rotate-45 rounded-md" style="background:rgba(255,255,255,.10)"></div>
+        <div class="hidden sm:block absolute top-14 left-10 w-8 h-8 rotate-45 rounded-md" style="background:rgba(255,255,255,.10)"></div>
+        <div class="hidden sm:block absolute bottom-10 left-16 w-16 h-16 rounded-full" style="background:rgba(255,255,255,.08)"></div>
+        <div class="hidden md:block absolute bottom-4 right-8 w-12 h-20 rounded-2xl -rotate-[15deg]" style="background:rgba(255,255,255,.09)"></div>
+        <div class="hidden lg:block absolute top-20 left-1/4 w-6 h-6 rotate-45 rounded-sm" style="background:rgba(255,255,255,.08)"></div>
+      </div>
       <div class="relative max-w-3xl mx-auto px-5 sm:px-8 pt-16 pb-12 sm:pt-20 sm:pb-16 text-center">
         <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
           <span class="text-sm">✈️</span>
@@ -129,7 +139,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-7">
       <div>
         <h2 class="text-xl font-extrabold text-gray-900 tracking-tight">Browse destinations</h2>
-        <p class="text-sm text-gray-500 mt-0.5"><span id="count">21</span> eSIM destinations</p>
+        <p class="text-sm text-gray-500 mt-0.5"><span id="count">70</span> eSIM destinations</p>
       </div>
       <div class="flex flex-wrap gap-2">
         <button onclick="filterRegion('all')"         class="region-tab active text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-900 text-white bg-gray-900">All</button>
@@ -139,6 +149,8 @@
         <button onclick="filterRegion('americas')"    class="region-tab text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-200 text-gray-500 bg-white">🌎 Americas</button>
         <button onclick="filterRegion('middle-east')" class="region-tab text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-200 text-gray-500 bg-white">🕌 Middle East</button>
         <button onclick="filterRegion('oceania')"     class="region-tab text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-200 text-gray-500 bg-white">🦘 Oceania</button>
+        <button onclick="filterRegion('africa')"      class="region-tab text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-200 text-gray-500 bg-white">🌍 Africa</button>
+        <button onclick="filterRegion('regional')"    class="region-tab text-xs font-bold px-3.5 py-2 rounded-xl border border-gray-200 text-gray-500 bg-white">🗺️ Regional</button>
       </div>
     </div>
 
@@ -291,6 +303,306 @@
         <div class="text-4xl mb-3 leading-none">🇧🇷</div>
         <p class="text-[13px] font-bold text-gray-900 mb-1">Brazil</p>
         <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+
+      <!-- Asia -->
+      <a href="/malaysia" data-region="asia" data-name="malaysia kuala lumpur"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇲🇾</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Malaysia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/taiwan" data-region="asia" data-name="taiwan taipei"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇹🇼</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Taiwan</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/hong-kong" data-region="asia" data-name="hong kong"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇭🇰</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Hong Kong</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/china" data-region="asia" data-name="china beijing shanghai"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇳</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">China</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/new-zealand" data-region="asia oceania" data-name="new zealand auckland"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇳🇿</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">New Zealand</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/sri-lanka" data-region="asia" data-name="sri lanka colombo"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇱🇰</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Sri Lanka</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/cambodia" data-region="asia" data-name="cambodia phnom penh angkor"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇰🇭</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Cambodia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/bangladesh" data-region="asia" data-name="bangladesh dhaka"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇧🇩</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Bangladesh</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/nepal" data-region="asia" data-name="nepal kathmandu everest"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇳🇵</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Nepal</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.90</span></p>
+      </a>
+      <a href="/maldives" data-region="asia" data-name="maldives male"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇲🇻</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Maldives</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$9.90</span></p>
+      </a>
+      <a href="/mongolia" data-region="asia" data-name="mongolia ulaanbaatar"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇲🇳</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Mongolia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$5.90</span></p>
+      </a>
+      <!-- Middle East & Africa -->
+      <a href="/saudi-arabia" data-region="middle-east" data-name="saudi arabia riyadh jeddah"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇸🇦</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Saudi Arabia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/israel" data-region="middle-east" data-name="israel tel aviv jerusalem"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇮🇱</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Israel</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/jordan" data-region="middle-east" data-name="jordan amman petra"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇯🇴</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Jordan</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.90</span></p>
+      </a>
+      <a href="/egypt" data-region="middle-east africa" data-name="egypt cairo pyramids"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇪🇬</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Egypt</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/morocco" data-region="middle-east africa" data-name="morocco marrakech casablanca"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇲🇦</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Morocco</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/south-africa" data-region="africa" data-name="south africa cape town johannesburg"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇿🇦</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">South Africa</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/kenya" data-region="africa" data-name="kenya nairobi safari"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇰🇪</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Kenya</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$5.90</span></p>
+      </a>
+      <a href="/nigeria" data-region="africa" data-name="nigeria lagos abuja"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇳🇬</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Nigeria</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/qatar" data-region="middle-east" data-name="qatar doha"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇶🇦</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Qatar</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/kuwait" data-region="middle-east" data-name="kuwait kuwait city"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇰🇼</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Kuwait</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/bahrain" data-region="middle-east" data-name="bahrain manama"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇧🇭</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Bahrain</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/pakistan" data-region="asia middle-east" data-name="pakistan karachi lahore"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇵🇰</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Pakistan</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <!-- Americas -->
+      <a href="/argentina" data-region="americas" data-name="argentina buenos aires"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇦🇷</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Argentina</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$7.90</span></p>
+      </a>
+      <a href="/chile" data-region="americas" data-name="chile santiago"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇱</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Chile</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/colombia" data-region="americas" data-name="colombia bogota medellin"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇴</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Colombia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$5.90</span></p>
+      </a>
+      <a href="/peru" data-region="americas" data-name="peru lima machu picchu"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇵🇪</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Peru</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/costa-rica" data-region="americas" data-name="costa rica san jose"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇷</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Costa Rica</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/dominican-republic" data-region="americas" data-name="dominican republic punta cana"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇩🇴</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Dominican Rep.</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$7.90</span></p>
+      </a>
+      <a href="/puerto-rico" data-region="americas" data-name="puerto rico san juan"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇵🇷</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Puerto Rico</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.90</span></p>
+      </a>
+      <!-- Europe (individual) -->
+      <a href="/poland" data-region="europe" data-name="poland warsaw krakow"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇵🇱</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Poland</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/netherlands" data-region="europe" data-name="netherlands amsterdam"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇳🇱</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Netherlands</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/switzerland" data-region="europe" data-name="switzerland zurich geneva"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇭</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Switzerland</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/greece" data-region="europe" data-name="greece athens santorini"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇬🇷</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Greece</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/portugal" data-region="europe" data-name="portugal lisbon porto"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇵🇹</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Portugal</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/czech-republic" data-region="europe" data-name="czech republic prague"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇨🇿</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Czech Republic</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/sweden" data-region="europe" data-name="sweden stockholm"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇸🇪</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Sweden</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/norway" data-region="europe" data-name="norway oslo bergen"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇳🇴</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Norway</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/denmark" data-region="europe" data-name="denmark copenhagen"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇩🇰</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Denmark</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/finland" data-region="europe" data-name="finland helsinki"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇫🇮</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Finland</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/ireland" data-region="europe" data-name="ireland dublin"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇮🇪</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Ireland</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/austria" data-region="europe" data-name="austria vienna salzburg"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇦🇹</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Austria</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/belgium" data-region="europe" data-name="belgium brussels bruges"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇧🇪</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Belgium</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/romania" data-region="europe" data-name="romania bucharest transylvania"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇷🇴</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Romania</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/hungary" data-region="europe" data-name="hungary budapest"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇭🇺</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Hungary</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/croatia" data-region="europe" data-name="croatia zagreb dubrovnik"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🇭🇷</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Croatia</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <!-- Regional eSIMs -->
+      <a href="/asia" data-region="asia regional" data-name="asia regional multi-country"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🌏</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Asia Regional</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.50</span></p>
+      </a>
+      <a href="/middle-east" data-region="middle-east regional" data-name="middle east regional"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🕌</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Middle East</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$4.90</span></p>
+      </a>
+      <a href="/africa" data-region="africa regional" data-name="africa regional"
+         class="dest-card bg-white rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center border-2 border-transparent hover:border-brand-400 shadow-sm">
+        <div class="text-4xl mb-3 leading-none">🌍</div>
+        <p class="text-[13px] font-bold text-gray-900 mb-1">Africa Regional</p>
+        <p class="text-[11px] text-gray-500">From <span class="font-bold text-gray-800">$7.40</span></p>
       </a>
 
       <div id="no-results" class="hidden col-span-full py-14 text-center">
