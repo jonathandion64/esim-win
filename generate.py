@@ -1,0 +1,733 @@
+#!/usr/bin/env python3
+"""
+Generate all 20 country eSIM pages for esim.win
+Run: python3 generate.py
+"""
+
+UTM = "?utm_medium=wpam_id_702"
+
+COUNTRIES = {
+    "japan": {
+        "name": "Japan", "flag": "🇯🇵", "slug": "japan",
+        "desc": "Buy prepaid Japan eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Japan from $4.50.",
+        "subtitle": "Stay connected across Japan. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312304270278","calls":False},
+            {"label":"3 GB","days":"5 days","price":"$6.90","perday":"$1.38/day","id":"3342690230013","calls":False},
+            {"label":"5 GB","days":"7 days","price":"$7.90","perday":"$1.13/day","id":"3342690230020","calls":False},
+            {"label":"10 GB","days":"15 days","price":"$9.90","perday":"$0.66/day","id":"3342690230037","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"3342604210018","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"3342604210025","calls":False},
+            {"label":"Unlimited","days":"20 days","price":"$39.90","perday":"$2.00/day","id":"3342509220013","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$44.90","perday":"$1.50/day","id":"3342604210032","calls":False},
+        ]
+    },
+    "thailand": {
+        "name": "Thailand", "flag": "🇹🇭", "slug": "thailand",
+        "desc": "Buy prepaid Thailand eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Thailand from $3.90.",
+        "subtitle": "Stay connected across Thailand. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$3.90","perday":"$0.56/day","id":"3352405311555","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$4.90","perday":"$0.16/day","id":"3352405313269","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$7.90","perday":"$0.26/day","id":"3352405314976","calls":False},
+            {"label":"Unlimited","days":"10 days","price":"$9.90","perday":"$0.99/day","id":"8893010230015","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3352405316680","calls":False},
+            {"label":"Unlimited","days":"15 days","price":"$19.90","perday":"$1.33/day","id":"8893010230022","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3352405318394","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3352406131558","calls":False},
+            {"label":"Unlimited","days":"30 days","price":"$34.90","perday":"$1.16/day","id":"8893010230023","calls":True},
+            {"label":"50 GB","days":"60 days","price":"$49.90","perday":"$0.83/day","id":"3352406133262","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "usa": {
+        "name": "USA", "flag": "🇺🇸", "slug": "usa",
+        "desc": "Buy prepaid USA eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for the United States from $4.50.",
+        "subtitle": "Stay connected across the United States with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"30 days","price":"$4.50","perday":"$0.15/day","id":"7842774018355","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252556","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404252730","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253300","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404253829","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409186139","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409186146","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "united-kingdom": {
+        "name": "United Kingdom", "flag": "🇬🇧", "slug": "united-kingdom",
+        "desc": "Buy prepaid UK eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for the United Kingdom from $4.50.",
+        "subtitle": "Stay connected across the UK. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312303310074","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252631","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312303310081","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253621","calls":False},
+            {"label":"15 GB","days":"15 days","price":"$15.90","perday":"$1.06/day","id":"3526356063671","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"5052503100041","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404254154","calls":False},
+            {"label":"75 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"5052503100034","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409186108","calls":False},
+            {"label":"150 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"5052503100027","calls":True,"badge":"Best Value"},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409186115","calls":False},
+            {"label":"Unlimited","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"5052503100010","calls":True},
+        ]
+    },
+    "south-korea": {
+        "name": "South Korea", "flag": "🇰🇷", "slug": "south-korea",
+        "desc": "Buy prepaid South Korea eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Korea from $4.50.",
+        "subtitle": "Stay connected across South Korea with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312305240010","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312305240027","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$9.90","perday":"$0.33/day","id":"3312404252853","calls":False},
+            {"label":"Unlimited","days":"3 days","price":"$14.90","perday":"$4.97/day","id":"3341110230015","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$18.90","perday":"$0.63/day","id":"3312305240034","calls":False,"badge":"Popular"},
+            {"label":"Unlimited","days":"5 days","price":"$19.90","perday":"$3.98/day","id":"3341110230022","calls":False},
+            {"label":"Unlimited","days":"10 days","price":"$29.90","perday":"$2.99/day","id":"3341110230039","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$33.90","perday":"$1.13/day","id":"3312305240041","calls":False},
+            {"label":"Unlimited","days":"20 days","price":"$39.90","perday":"$2.00/day","id":"3341110230046","calls":False},
+            {"label":"Unlimited","days":"30 days","price":"$44.90","perday":"$1.50/day","id":"3341110230053","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$47.90","perday":"$1.60/day","id":"3312409185415","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$75.90","perday":"$2.53/day","id":"3312409185422","calls":False},
+        ]
+    },
+    "united-arab-emirates": {
+        "name": "United Arab Emirates", "flag": "🇦🇪", "slug": "united-arab-emirates",
+        "desc": "Buy prepaid UAE eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Dubai & UAE from $4.50.",
+        "subtitle": "Stay connected across the UAE including Dubai & Abu Dhabi. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404252365","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$11.90","perday":"$0.40/day","id":"3312404252372","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$17.90","perday":"$0.60/day","id":"3312404252389","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3312404252396","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$59.90","perday":"$2.00/day","id":"3312404252402","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$84.90","perday":"$2.83/day","id":"3312409186085","calls":False},
+        ]
+    },
+    "australia": {
+        "name": "Australia", "flag": "🇦🇺", "slug": "australia",
+        "desc": "Buy prepaid Australia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Australia from $4.50.",
+        "subtitle": "Stay connected across Australia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312303310050","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252570","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404252754","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253324","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404253843","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409180267","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409180274","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "singapore": {
+        "name": "Singapore", "flag": "🇸🇬", "slug": "singapore",
+        "desc": "Buy prepaid Singapore eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Singapore from $4.50.",
+        "subtitle": "Stay connected in Singapore with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405311425","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3352405313139","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3352405314846","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3352405316550","calls":False,"badge":"Popular"},
+            {"label":"Unlimited","days":"7 days","price":"$14.90","perday":"$2.13/day","id":"3342404110013","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3352405318264","calls":False},
+            {"label":"Unlimited","days":"15 days","price":"$29.90","perday":"$1.99/day","id":"3342404110020","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3352406131428","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$49.90","perday":"$0.83/day","id":"3352406133132","calls":False,"badge":"Best Value"},
+            {"label":"Unlimited","days":"30 days","price":"$54.90","perday":"$1.83/day","id":"3342404110037","calls":False},
+        ]
+    },
+    "vietnam": {
+        "name": "Vietnam", "flag": "🇻🇳", "slug": "vietnam",
+        "desc": "Buy prepaid Vietnam eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Vietnam from $4.50.",
+        "subtitle": "Stay connected across Vietnam. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312305240423","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252624","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404252945","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312305240430","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312305240447","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3312409186306","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$51.90","perday":"$1.73/day","id":"3312409186313","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "indonesia": {
+        "name": "Indonesia", "flag": "🇮🇩", "slug": "indonesia",
+        "desc": "Buy prepaid Indonesia eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Bali & Indonesia from $4.50.",
+        "subtitle": "Stay connected across Indonesia including Bali. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312305240225","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312409182667","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312305240249","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312305240256","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312409182674","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409182681","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409182698","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "mexico": {
+        "name": "Mexico", "flag": "🇲🇽", "slug": "mexico",
+        "desc": "Buy prepaid Mexico eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Mexico from $4.50.",
+        "subtitle": "Stay connected across Mexico. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404251962","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$8.90","perday":"$0.30/day","id":"3312404251979","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404251986","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404251993","calls":False},
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$44.90","perday":"$1.50/day","id":"3312404252006","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$63.90","perday":"$2.13/day","id":"3312409183695","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$99.90","perday":"$3.33/day","id":"3312409183701","calls":False},
+        ]
+    },
+    "canada": {
+        "name": "Canada", "flag": "🇨🇦", "slug": "canada",
+        "desc": "Buy prepaid Canada eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Canada from $4.50.",
+        "subtitle": "Stay connected across Canada. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405310299","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$7.90","perday":"$0.26/day","id":"3352405312002","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$11.90","perday":"$0.40/day","id":"3352405313719","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"3352405315423","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$40.90","perday":"$1.36/day","id":"3352405317137","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$57.90","perday":"$1.93/day","id":"3352406130292","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$91.90","perday":"$1.53/day","id":"3352406132005","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "turkey": {
+        "name": "Turkey", "flag": "🇹🇷", "slug": "turkey",
+        "desc": "Buy prepaid Turkey eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Turkey from $4.50.",
+        "subtitle": "Stay connected across Turkey with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312304040017","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252518","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312304040024","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312304040031","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312304040048","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409185965","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409185972","calls":False,"badge":"Best Value"},
+            {"label":"100 GB","days":"30 days","price":"$64.90","perday":"$2.16/day","id":"3312501290017","calls":False},
+        ]
+    },
+    "france": {
+        "name": "France", "flag": "🇫🇷", "slug": "france",
+        "desc": "Buy prepaid France eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for France from $4.50.",
+        "subtitle": "Stay connected across France with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312303200030","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312303310029","calls":False},
+            {"label":"Unlimited","days":"3 days","price":"$9.90","perday":"$3.30/day","id":"3352408060030","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253232","calls":False},
+            {"label":"Unlimited","days":"7 days","price":"$14.90","perday":"$2.13/day","id":"3352408060047","calls":False},
+            {"label":"15 GB","days":"15 days","price":"$15.90","perday":"$1.06/day","id":"3526356063671","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"8595106658537","calls":True},
+            {"label":"20 GB","days":"15 days","price":"$23.90","perday":"$1.59/day","id":"3526356063672","calls":True},
+            {"label":"20 GB","days":"31 days","price":"$28.90","perday":"$0.93/day","id":"3561292347756","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409181806","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"60 GB","days":"30 days","price":"$39.90","perday":"$1.33/day","id":"3522405130016","calls":True,"badge":"Best Value"},
+            {"label":"50 GB","days":"31 days","price":"$49.90","perday":"$1.61/day","id":"3561292346865","calls":True},
+            {"label":"100 GB","days":"31 days","price":"$55.90","perday":"$1.80/day","id":"3561292400826","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True},
+        ]
+    },
+    "italy": {
+        "name": "Italy", "flag": "🇮🇹", "slug": "italy",
+        "desc": "Buy prepaid Italy eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Italy from $4.50.",
+        "subtitle": "Stay connected across Italy with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312304100261","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312304100278","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312305220012","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253454","calls":False},
+            {"label":"15 GB","days":"15 days","price":"$15.90","perday":"$1.06/day","id":"3526356063671","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"8595106658537","calls":True},
+            {"label":"20 GB","days":"15 days","price":"$23.90","perday":"$1.59/day","id":"3526356063672","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404253966","calls":False},
+            {"label":"20 GB","days":"31 days","price":"$28.90","perday":"$0.93/day","id":"3561292347756","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312304100285","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"60 GB","days":"30 days","price":"$39.90","perday":"$1.33/day","id":"3522405130016","calls":True,"badge":"Best Value"},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409182803","calls":False},
+            {"label":"50 GB","days":"31 days","price":"$49.90","perday":"$1.61/day","id":"3561292346865","calls":True},
+            {"label":"100 GB","days":"31 days","price":"$55.90","perday":"$1.80/day","id":"3561292400826","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True},
+        ]
+    },
+    "spain": {
+        "name": "Spain", "flag": "🇪🇸", "slug": "spain",
+        "desc": "Buy prepaid Spain eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Spain from $4.50.",
+        "subtitle": "Stay connected across Spain. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312304110178","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312304110185","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404253102","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253614","calls":False},
+            {"label":"15 GB","days":"15 days","price":"$15.90","perday":"$1.06/day","id":"3526356063671","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"8595106658537","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404254147","calls":False},
+            {"label":"20 GB","days":"31 days","price":"$28.90","perday":"$0.93/day","id":"3561292347756","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312304110192","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"60 GB","days":"30 days","price":"$39.90","perday":"$1.33/day","id":"3522405130016","calls":True,"badge":"Best Value"},
+            {"label":"50 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409185439","calls":False},
+            {"label":"50 GB","days":"31 days","price":"$49.90","perday":"$1.61/day","id":"3561292346865","calls":True},
+            {"label":"100 GB","days":"31 days","price":"$55.90","perday":"$1.80/day","id":"3561292400826","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True},
+        ]
+    },
+    "germany": {
+        "name": "Germany", "flag": "🇩🇪", "slug": "germany",
+        "desc": "Buy prepaid Germany eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Germany from $4.50.",
+        "subtitle": "Stay connected across Germany with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312304100124","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312304100131","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404253003","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404253515","calls":False},
+            {"label":"15 GB","days":"15 days","price":"$15.90","perday":"$1.06/day","id":"3526356063671","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"8595106658537","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404254048","calls":False},
+            {"label":"20 GB","days":"31 days","price":"$28.90","perday":"$0.93/day","id":"3561292347756","calls":True},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312304100148","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"60 GB","days":"30 days","price":"$39.90","perday":"$1.33/day","id":"3522405130016","calls":True,"badge":"Best Value"},
+            {"label":"50 GB","days":"60 days","price":"$49.90","perday":"$0.83/day","id":"3312306230027","calls":False},
+            {"label":"50 GB","days":"31 days","price":"$49.90","perday":"$1.61/day","id":"3561292346865","calls":True},
+            {"label":"100 GB","days":"31 days","price":"$55.90","perday":"$1.80/day","id":"3561292400826","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True},
+        ]
+    },
+    "philippines": {
+        "name": "Philippines", "flag": "🇵🇭", "slug": "philippines",
+        "desc": "Buy prepaid Philippines eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for the Philippines from $4.50.",
+        "subtitle": "Stay connected across the Philippines. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405311241","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3352405312958","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$7.90","perday":"$0.26/day","id":"3352405314662","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3352405316376","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$26.90","perday":"$0.90/day","id":"3352405318080","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$38.90","perday":"$1.30/day","id":"3352406131244","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$60.90","perday":"$1.02/day","id":"3352406132951","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "india": {
+        "name": "India", "flag": "🇮🇳", "slug": "india",
+        "desc": "Buy prepaid India eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for India from $4.50.",
+        "subtitle": "Stay connected across India. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312303310067","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404252532","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$7.90","perday":"$0.26/day","id":"3312404252662","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404253249","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$26.90","perday":"$0.90/day","id":"3312404253768","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$37.90","perday":"$1.26/day","id":"3312409182643","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$59.90","perday":"$2.00/day","id":"3312409182650","calls":False},
+        ]
+    },
+    "brazil": {
+        "name": "Brazil", "flag": "🇧🇷", "slug": "brazil",
+        "desc": "Buy prepaid Brazil eSIM data plans. 5G coverage, instant activation, no roaming fees. Best eSIM deals for Brazil from $4.50.",
+        "subtitle": "Stay connected across Brazil with 5G coverage. Instant activation via QR code.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405310237","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3352405311944","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$10.90","perday":"$0.36/day","id":"3352405313658","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"3352405315362","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$35.90","perday":"$1.20/day","id":"3352405317076","calls":False},
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$50.90","perday":"$1.70/day","id":"3352406130230","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$80.90","perday":"$1.35/day","id":"3352406131947","calls":False,"badge":"Best Value"},
+        ]
+    },
+}
+
+GTM_SNIPPET = '''  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRL0Z9QHKW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-SRL0Z9QHKW');
+  </script>'''
+
+NAV_LINKS = '''    <div class="hidden md:flex items-center gap-8">
+          <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Home</a>
+          <a href="#plans" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Plans</a>
+          <a href="#how-it-works" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">How It Works</a>
+          <a href="#faq" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
+        </div>'''
+
+def plan_row(p, first=False):
+    url = f"https://www.simoptions.com/checkout/esim/{p['id']}/{UTM}"
+    calls_attr = ' data-calls="1"' if p.get('calls') else ''
+    badge = p.get('badge','')
+    badge_html = ''
+    if badge == 'Popular':
+        badge_html = '<span class="shrink-0 text-[10px] font-bold text-brand-600 bg-orange-50 border border-orange-200 rounded-full px-2 py-0.5 leading-none">Popular</span>'
+    elif badge == 'Best Value':
+        badge_html = '<span class="shrink-0 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2 py-0.5 leading-none">Best Value</span>'
+
+    flex_cls = 'flex items-center gap-2 min-w-0' if badge_html else 'flex-1 min-w-0'
+    label_inner = f'<span class="text-[15px] font-bold text-gray-900">{p["label"]}</span>'
+    if badge_html:
+        label_div = f'      <div class="{flex_cls}">{label_inner}\n            {badge_html}\n          </div>'
+    else:
+        label_div = f'      <div class="flex-1 min-w-0">{label_inner}</div>'
+
+    return f'''        <div onclick="selectPlan(this)"
+             data-url="{url}"
+             data-label="{p["label"]}" data-days="{p["days"]}" data-price="{p["price"]}" data-perday="{p["perday"]}"{calls_attr}
+             class="plan-row flex items-center gap-3.5 bg-white rounded-2xl px-4 py-3.5 cursor-pointer border-2 border-transparent shadow-plan">
+          <div class="plan-check w-5 h-5 rounded-full border-2 border-gray-200 shrink-0 flex items-center justify-center">
+            <svg class="plan-check-icon w-2.5 h-2.5 text-white hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </div>
+          {label_div}
+          <div class="text-right shrink-0">
+            <div class="text-[15px] font-bold text-gray-900">{p["price"]} <span class="text-xs font-medium text-gray-400">USD</span></div>
+            <div class="text-[11px] text-gray-400 mt-0.5">{p["perday"]}</div>
+          </div>
+        </div>'''
+
+
+def group_by_validity(plans):
+    """Group plans by validity period, preserving order of first appearance."""
+    groups = {}
+    order = []
+    for p in plans:
+        d = p['days']
+        if d not in groups:
+            groups[d] = []
+            order.append(d)
+        groups[d].append(p)
+    return [(d, groups[d]) for d in order]
+
+
+def plans_html(plans):
+    groups = group_by_validity(plans)
+    parts = []
+    for i, (days, group) in enumerate(groups):
+        parts.append(f'      <div class="validity-label"><span>{days}</span></div>')
+        mb = 'mb-7' if i < len(groups)-1 else ''
+        parts.append(f'      <div class="space-y-2 {mb}">')
+        for j, p in enumerate(group):
+            parts.append(plan_row(p, first=(i==0 and j==0)))
+        parts.append('      </div>')
+    return '\n'.join(parts)
+
+
+def generate(slug, c):
+    name = c['name']
+    flag = c['flag']
+    plans = c['plans']
+    from_price = plans[0]['price']
+    p_html = plans_html(plans)
+
+    html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{name} eSIM Data Plans | From {from_price} | esim.win</title>
+  <meta name="description" content="{c['desc']}">
+  <link rel="canonical" href="https://esim.win/{slug}">
+  <meta property="og:title" content="{name} eSIM | From {from_price} | esim.win">
+  <meta property="og:description" content="{c['desc']}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://esim.win/{slug}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+{GTM_SNIPPET}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {{
+      theme: {{
+        extend: {{
+          fontFamily: {{ sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] }},
+          colors: {{
+            brand: {{
+              50:'#fff5eb',100:'#ffe9d0',200:'#ffd0a0',300:'#ffb06a',
+              400:'#ff8c3a',500:'#ff6b1a',600:'#e85500',700:'#c44500',
+              800:'#a03700',900:'#7c2b00'
+            }}
+          }},
+          boxShadow: {{ 'plan':'0 1px 4px 0 rgba(0,0,0,.06)' }}
+        }}
+      }}
+    }}
+  </script>
+  <style>
+    html {{ scroll-behavior: smooth; }}
+    body {{ background-color: #F7F6F3; }}
+    details summary::-webkit-details-marker {{ display: none; }}
+    details summary {{ list-style: none; }}
+    .plan-row {{ transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease; }}
+    .plan-row:hover {{ box-shadow: 0 4px 16px rgba(0,0,0,.09); }}
+    .plan-row.selected {{ border-color: #ff6b1a !important; background-color: #fff9f5; }}
+    .plan-check {{ transition: background-color .15s ease, border-color .15s ease; }}
+    #sticky-bar {{ transition: transform .35s cubic-bezier(.16,1,.3,1); }}
+    .validity-label {{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }}
+    .validity-label span {{ font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#9CA3AF; white-space:nowrap; }}
+    .validity-label::after {{ content:''; display:block; flex:1; height:1px; background:#E5E7EB; }}
+  </style>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-shadow duration-300">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0">
+          <span class="text-2xl leading-none">🌐</span>
+          <span class="text-[17px] font-bold tracking-tight text-gray-900">esim<span class="text-brand-500">.win</span></span>
+        </a>
+{NAV_LINKS}
+        <button id="menu-toggle" class="md:hidden p-2 -mr-1 rounded-xl hover:bg-gray-100" aria-label="Menu">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white/95">
+      <div class="max-w-5xl mx-auto px-5 py-3 space-y-0.5">
+        <a href="/"            class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Home</a>
+        <a href="#plans"       class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">Plans</a>
+        <a href="#how-it-works" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">How It Works</a>
+        <a href="#faq"         class="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="relative pt-16">
+    <div class="relative overflow-hidden" style="background:linear-gradient(135deg,#e85500 0%,#ff6b1a 40%,#ff9a00 100%)">
+      <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20" style="background:rgba(255,255,255,.25);filter:blur(60px)"></div>
+      <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full opacity-15" style="background:rgba(255,255,255,.3);filter:blur(50px)"></div>
+      <div class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-20 sm:pb-24 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
+          <span class="text-2xl leading-none">{flag}</span>
+          <span class="text-xs font-bold text-white/90 tracking-wide uppercase">{name} eSIM</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-5">
+          {name} eSIM<br><span class="opacity-90">Data Plans</span>
+        </h1>
+        <p class="text-base sm:text-lg text-white/75 max-w-sm mx-auto mb-8 leading-relaxed">{c['subtitle']}</p>
+        <a href="#plans" class="inline-flex items-center gap-2.5 bg-white text-gray-900 font-bold text-sm px-7 py-3.5 rounded-2xl hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+          Get My eSIM
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5"><svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-xs font-semibold text-white">Instant Delivery</span></div>
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5"><svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-xs font-semibold text-white">From {from_price}</span></div>
+          <div class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3.5 py-1.5"><svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-xs font-semibold text-white">No Contract</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white border-b border-gray-100">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 py-3.5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <div class="flex items-center gap-2"><span style="color:#FBBF24;letter-spacing:-1px">★★★★★</span><span class="text-sm font-bold text-gray-900">4.9</span><span class="text-sm text-gray-400">· 10,000+ travelers</span></div>
+        <span class="hidden sm:block text-gray-200 text-lg font-thin">|</span>
+        <div class="flex items-center gap-4 text-sm text-gray-500">
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Instant delivery</span>
+          <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>No contract</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" class="max-w-lg mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <div class="mb-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-0.5">Choose your plan</h2>
+      <p class="text-sm text-gray-500">{c['compatible']}</p>
+    </div>
+    <div class="space-y-0">
+{p_html}
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="bg-white border-t border-gray-100 py-14 sm:py-20">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">How it works</h2>
+        <p class="text-sm text-gray-500 mt-2">Three steps. Less than two minutes.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-11 h-11 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center mb-4"><span class="text-base font-extrabold text-brand-500">1</span></div>
+          <h3 class="text-base font-bold text-gray-900 mb-1.5">Pick a plan</h3>
+          <p class="text-sm text-gray-500 leading-relaxed max-w-[180px]">Choose the data and validity that fits your trip.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-11 h-11 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center mb-4"><span class="text-base font-extrabold text-brand-500">2</span></div>
+          <h3 class="text-base font-bold text-gray-900 mb-1.5">Scan the QR code</h3>
+          <p class="text-sm text-gray-500 leading-relaxed max-w-[180px]">Your eSIM is delivered instantly to your inbox after purchase.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-11 h-11 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center mb-4"><span class="text-base font-extrabold text-brand-500">3</span></div>
+          <h3 class="text-base font-bold text-gray-900 mb-1.5">Connect &amp; go</h3>
+          <p class="text-sm text-gray-500 leading-relaxed max-w-[180px]">Activate on arrival. Full-speed data across {name}.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-lg mx-auto px-4 sm:px-6 py-14 sm:py-20">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Frequently asked</h2>
+    </div>
+    <div class="space-y-2">
+      <details class="bg-white rounded-2xl group"><summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 select-none">What is an eSIM?<span class="ml-4 shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-open:bg-gray-200 transition-colors"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg></span></summary><div class="px-5 pb-4 text-sm text-gray-500 leading-relaxed">An eSIM is a digital SIM built into your phone. Scan a QR code to activate — no physical card, no local SIM shop needed.</div></details>
+      <details class="bg-white rounded-2xl group"><summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 select-none">Is my device compatible?<span class="ml-4 shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-open:bg-gray-200 transition-colors"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg></span></summary><div class="px-5 pb-4 text-sm text-gray-500 leading-relaxed">iPhone XS+, Pixel 3+, Samsung Galaxy S20+ and most modern phones support eSIM. Check Settings → Mobile Data → Add eSIM.</div></details>
+      <details class="bg-white rounded-2xl group"><summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 select-none">Can I keep my regular SIM?<span class="ml-4 shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-open:bg-gray-200 transition-colors"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg></span></summary><div class="px-5 pb-4 text-sm text-gray-500 leading-relaxed">Yes — dual SIM lets you keep your home number for calls while using the eSIM for data in {name}.</div></details>
+      <details class="bg-white rounded-2xl group"><summary class="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 select-none">What if my data runs out?<span class="ml-4 shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-open:bg-gray-200 transition-colors"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg></span></summary><div class="px-5 pb-4 text-sm text-gray-500 leading-relaxed">Your connection pauses — no surprise charges. Buy a top-up or new plan anytime.</div></details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-gray-400 py-10 pb-32 sm:pb-10">
+    <div class="max-w-lg mx-auto px-5 sm:px-8 text-center">
+      <a href="/" class="inline-flex items-center gap-2 mb-4"><span class="text-xl">🌐</span><span class="text-base font-bold text-white">esim<span class="text-brand-400">.win</span></span></a>
+      <p class="text-xs text-gray-500 leading-relaxed mb-6">Instant eSIM data plans for 200+ destinations.<br>No roaming. No contracts.</p>
+      <div class="flex flex-wrap justify-center gap-5 text-xs mb-8">
+        <a href="/"      class="hover:text-white transition-colors">Home</a>
+        <a href="#plans" class="hover:text-white transition-colors">Plans</a>
+        <a href="#faq"   class="hover:text-white transition-colors">FAQ</a>
+        <a href="/europe" class="hover:text-white transition-colors">Europe eSIM</a>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-1.5">
+        <p class="font-semibold text-gray-400">Arty Digital Ltd</p>
+        <p>9B Amtel Building, 148 Des Voeux Road, Central, Hong Kong</p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2 pb-1">
+          <a href="/legal.html#privacy"   class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/legal.html#terms"     class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="/legal.html#affiliate" class="hover:text-white transition-colors">Affiliate Disclosure</a>
+        </div>
+        <p>&copy; 2026 esim.win &mdash; All rights reserved.</p>
+        <p class="text-gray-600">We may earn a commission when you purchase through links on this site at no extra cost to you.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Buy Now Bar -->
+  <div id="sticky-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200/80 shadow-[0_-4px_24px_rgba(0,0,0,.10)] translate-y-full">
+    <div class="max-w-lg mx-auto px-4 sm:px-6 py-3 flex items-center gap-4">
+      <div class="flex-1 min-w-0">
+        <p class="text-[11px] font-medium text-gray-400 uppercase tracking-wide truncate" id="bar-label">{plans[0]['label']} &middot; {plans[0]['days']}</p>
+        <div class="flex items-baseline gap-2">
+          <span class="text-lg font-extrabold text-gray-900 leading-tight" id="bar-price">{plans[0]['price']}</span>
+          <span class="text-[11px] text-gray-400" id="bar-perday">{plans[0]['perday']}</span>
+        </div>
+      </div>
+      <div class="hidden sm:flex flex-col items-end shrink-0">
+        <div class="flex items-center gap-1 text-[11px] text-gray-400"><svg class="w-3 h-3 text-green-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>Secure checkout</div>
+        <div class="text-[10px] text-gray-300 mt-0.5">Visa &middot; Mastercard &middot; Apple Pay</div>
+      </div>
+      <button id="buy-now-btn" class="shrink-0 inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 active:scale-95 text-white font-bold text-sm px-6 py-3 rounded-xl transition-all duration-150 shadow-md shadow-orange-200">
+        Buy Now
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    var selectedUrl = '';
+
+    function selectPlan(el) {{
+      document.querySelectorAll('.plan-row').forEach(function(row) {{
+        row.classList.remove('selected');
+        row.querySelector('.plan-check').style.backgroundColor = '';
+        row.querySelector('.plan-check').style.borderColor = '';
+        row.querySelector('.plan-check-icon').classList.add('hidden');
+      }});
+      el.classList.add('selected');
+      el.querySelector('.plan-check').style.backgroundColor = '#ff6b1a';
+      el.querySelector('.plan-check').style.borderColor = '#ff6b1a';
+      el.querySelector('.plan-check-icon').classList.remove('hidden');
+      selectedUrl = el.dataset.url;
+      document.getElementById('bar-label').textContent  = el.dataset.label + ' · ' + el.dataset.days;
+      document.getElementById('bar-price').textContent  = el.dataset.price;
+      document.getElementById('bar-perday').textContent = el.dataset.perday;
+      document.getElementById('sticky-bar').classList.remove('translate-y-full');
+      if (typeof gtag === 'function') {{
+        gtag('event', 'select_item', {{
+          item_list_name: '{name} eSIM Plans',
+          items: [{{ item_id: el.dataset.url.split('/').filter(Boolean).pop(), item_name: el.dataset.label + ' · ' + el.dataset.days, price: parseFloat(el.dataset.price.replace('$','')), currency:'USD', quantity:1 }}]
+        }});
+      }}
+    }}
+
+    document.getElementById('buy-now-btn').addEventListener('click', function() {{
+      if (!selectedUrl) return;
+      if (typeof gtag === 'function') {{
+        var price = parseFloat(document.getElementById('bar-price').textContent.replace('$',''));
+        gtag('event','begin_checkout',{{ currency:'USD', value:price, items:[{{ item_id:selectedUrl.split('/').filter(Boolean).pop(), item_name:document.getElementById('bar-label').textContent, item_category:'{name} eSIM', price:price, currency:'USD', quantity:1 }}] }});
+      }}
+      window.open(selectedUrl,'_blank','noopener');
+    }});
+
+    document.getElementById('menu-toggle').addEventListener('click',function(){{document.getElementById('mobile-menu').classList.toggle('hidden');}});
+    document.querySelectorAll('#mobile-menu a').forEach(function(l){{l.addEventListener('click',function(){{document.getElementById('mobile-menu').classList.add('hidden');}});}});
+
+    new IntersectionObserver(function(e){{document.getElementById('navbar').classList.toggle('shadow-sm',!e[0].isIntersecting);}},{{threshold:0}}).observe(document.getElementById('hero'));
+
+    document.addEventListener('DOMContentLoaded', function() {{
+      // Calls & SMS badges
+      document.querySelectorAll('.plan-row[data-calls="1"]').forEach(function(row) {{
+        var wrap = row.querySelector('.flex-1');
+        if (!wrap) return;
+        wrap.classList.add('flex','items-center','gap-2');
+        var b = document.createElement('span');
+        b.className = 'shrink-0 inline-flex items-center gap-1 text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-2 py-0.5 leading-none whitespace-nowrap';
+        b.innerHTML = '<svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Calls & SMS';
+        wrap.appendChild(b);
+      }});
+      // Pre-select first plan
+      var first = document.querySelector('.plan-row');
+      if (first) selectPlan(first);
+    }});
+  </script>
+</body>
+</html>'''
+    return html
+
+
+import os
+out_dir = '/Users/jonathandion/esim.win'
+for slug, c in COUNTRIES.items():
+    html = generate(slug, c)
+    path = os.path.join(out_dir, slug + '.html')
+    with open(path, 'w') as f:
+        f.write(html)
+    print(f'  wrote {slug}.html ({len(c["plans"])} plans)')
+
+print(f'\nDone — {len(COUNTRIES)} country pages generated.')
