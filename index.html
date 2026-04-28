@@ -12,6 +12,16 @@
   <meta property="og:url" content="https://esim.win/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRL0Z9QHKW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SRL0Z9QHKW');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -684,6 +694,21 @@
 
       var bar = document.getElementById('sticky-bar');
       bar.classList.remove('translate-y-full');
+
+      // GA4 — track which plan the user selected
+      if (typeof gtag === 'function') {
+        gtag('event', 'select_item', {
+          item_list_name: 'Europe eSIM Plans',
+          items: [{
+            item_id:       el.dataset.url.split('/').filter(Boolean).pop(),
+            item_name:     el.dataset.label + ' · ' + el.dataset.days,
+            item_category: el.dataset.tab === 'unlimited' ? 'Unlimited' : 'Standard',
+            price:         parseFloat(el.dataset.price.replace('$', '')),
+            currency:      'USD',
+            quantity:      1
+          }]
+        });
+      }
     }
 
     function switchTab(tab) {
@@ -710,7 +735,28 @@
     }
 
     document.getElementById('buy-now-btn').addEventListener('click', function() {
-      if (selectedUrl) window.open(selectedUrl, '_blank', 'noopener');
+      if (!selectedUrl) return;
+
+      // GA4 — begin_checkout fires right before the user hits simoptions
+      if (typeof gtag === 'function') {
+        var label   = document.getElementById('bar-label').textContent;   // "15 GB · 15 days"
+        var price   = parseFloat(document.getElementById('bar-price').textContent.replace('$', ''));
+        var planId  = selectedUrl.split('/').filter(Boolean).pop();
+        gtag('event', 'begin_checkout', {
+          currency: 'USD',
+          value:    price,
+          items: [{
+            item_id:       planId,
+            item_name:     label,
+            item_category: 'Europe eSIM',
+            price:         price,
+            currency:      'USD',
+            quantity:      1
+          }]
+        });
+      }
+
+      window.open(selectedUrl, '_blank', 'noopener');
     });
 
     // Mobile menu
