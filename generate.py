@@ -1084,6 +1084,772 @@ COUNTRIES = {
             {"label":"5 GB","days":"30 days","price":"$34.40","perday":"$1.15/day","id":"3352406180525","calls":False,"badge":"Best Value"},
         ]
     },
+    "bermuda": {
+        "name": "Bermuda", "flag": "🇧🇲", "slug": "bermuda",
+        "desc": "Buy prepaid Bermuda eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Bermuda from $16.90.",
+        "subtitle": "Stay connected across Bermuda. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$16.90","perday":"$2.41/day","id":"3312404254376","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$46.90","perday":"$1.56/day","id":"3312404254383","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$73.90","perday":"$2.46/day","id":"3312404254390","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "el-salvador": {
+        "name": "El Salvador", "flag": "🇸🇻", "slug": "el-salvador",
+        "desc": "Buy prepaid El Salvador eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across El Salvador. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405310480","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$8.90","perday":"$0.30/day","id":"3352405312194","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$13.90","perday":"$0.46/day","id":"3352405313900","calls":False,"badge":"Best Value"},
+            {"label":"10 GB","days":"30 days","price":"$25.90","perday":"$0.86/day","id":"3352405315614","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$45.90","perday":"$1.53/day","id":"3352405317328","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$65.90","perday":"$2.20/day","id":"3352406130483","calls":False},
+        ]
+    },
+    "guatemala": {
+        "name": "Guatemala", "flag": "🇬🇹", "slug": "guatemala",
+        "desc": "Buy prepaid Guatemala eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $7.90.",
+        "subtitle": "Stay connected across Guatemala. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$7.90","perday":"$1.13/day","id":"3312409182278","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"3312304050085","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$30.90","perday":"$1.03/day","id":"3312404252693","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$58.90","perday":"$1.96/day","id":"3312404253263","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$106.90","perday":"$3.56/day","id":"3312404253782","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "honduras": {
+        "name": "Honduras", "flag": "🇭🇳", "slug": "honduras",
+        "desc": "Buy prepaid Honduras eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Honduras. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312304050092","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$17.90","perday":"$0.60/day","id":"3312304050108","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$27.90","perday":"$0.93/day","id":"3312404252709","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$51.90","perday":"$1.73/day","id":"3312404253270","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$94.90","perday":"$3.16/day","id":"3312404253799","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "nicaragua": {
+        "name": "Nicaragua", "flag": "🇳🇮", "slug": "nicaragua",
+        "desc": "Buy prepaid Nicaragua eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $7.90.",
+        "subtitle": "Stay connected across Nicaragua. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$7.90","perday":"$1.13/day","id":"3312304050115","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$20.90","perday":"$0.70/day","id":"3312404252549","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312404252716","calls":False,"badge":"Best Value"},
+            {"label":"10 GB","days":"30 days","price":"$60.90","perday":"$2.03/day","id":"3312404253287","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$111.90","perday":"$3.73/day","id":"3312404253805","calls":False},
+        ]
+    },
+    "panama": {
+        "name": "Panama", "flag": "🇵🇦", "slug": "panama",
+        "desc": "Buy prepaid Panama eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Panama. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312304050122","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$16.90","perday":"$0.56/day","id":"3312304050139","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$25.90","perday":"$0.86/day","id":"3312404252785","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$48.90","perday":"$1.63/day","id":"3312404253355","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$88.90","perday":"$2.96/day","id":"3312404253874","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "greenland": {
+        "name": "Greenland", "flag": "🇬🇱", "slug": "greenland",
+        "desc": "Buy prepaid Greenland eSIM data plans. Instant activation, no roaming fees. Best eSIM deals for Greenland from $23.90.",
+        "subtitle": "Stay connected across Greenland. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$23.90","perday":"$3.41/day","id":"3312404255076","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$66.90","perday":"$2.23/day","id":"3312404255083","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$107.90","perday":"$3.60/day","id":"3312409182070","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "bolivia": {
+        "name": "Bolivia", "flag": "🇧🇴", "slug": "bolivia",
+        "desc": "Buy prepaid Bolivia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Bolivia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312304050016","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$17.90","perday":"$0.60/day","id":"3312304050023","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$27.90","perday":"$0.93/day","id":"3312404252808","calls":False,"badge":"Best Value"},
+            {"label":"10 GB","days":"30 days","price":"$51.90","perday":"$1.73/day","id":"3312404253386","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$94.90","perday":"$3.16/day","id":"3312404253898","calls":False},
+        ]
+    },
+    "ecuador": {
+        "name": "Ecuador", "flag": "🇪🇨", "slug": "ecuador",
+        "desc": "Buy prepaid Ecuador eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Ecuador. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404251665","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$8.90","perday":"$0.30/day","id":"3312404251672","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404251689","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$23.90","perday":"$0.80/day","id":"3312404251696","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$42.90","perday":"$1.43/day","id":"3312404251702","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$61.90","perday":"$2.06/day","id":"3312409181554","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$97.90","perday":"$3.26/day","id":"3312409181561","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "paraguay": {
+        "name": "Paraguay", "flag": "🇵🇾", "slug": "paraguay",
+        "desc": "Buy prepaid Paraguay eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Paraguay. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404252112","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404252129","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$22.90","perday":"$0.76/day","id":"3312404252136","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$42.90","perday":"$1.43/day","id":"3312404252143","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$78.90","perday":"$2.63/day","id":"3312404252150","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$112.90","perday":"$3.76/day","id":"3312409184616","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "palestine": {
+        "name": "Palestine", "flag": "🇵🇸", "slug": "palestine",
+        "desc": "Buy prepaid Palestine eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $11.90.",
+        "subtitle": "Stay connected across Palestine. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$11.90","perday":"$1.70/day","id":"3312404254765","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3312404254772","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$52.90","perday":"$1.76/day","id":"3312404254789","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$100.90","perday":"$3.36/day","id":"3312409184487","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "guadeloupe": {
+        "name": "Guadeloupe", "flag": "🇬🇵", "slug": "guadeloupe",
+        "desc": "Buy prepaid Guadeloupe eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $21.90.",
+        "subtitle": "Stay connected across Guadeloupe. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"10 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"8595106658537","calls":True,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"60 GB","days":"30 days","price":"$39.90","perday":"$1.33/day","id":"3522405130016","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "martinique": {
+        "name": "Martinique", "flag": "🇲🇶", "slug": "martinique",
+        "desc": "Buy prepaid Martinique eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Martinique. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404251917","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404251924","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404251931","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404251948","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"8595106658538","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3526356063683","calls":True},
+            {"label":"120 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3526350133054","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "montserrat": {
+        "name": "Montserrat", "flag": "🇲🇸", "slug": "montserrat",
+        "desc": "Buy prepaid Montserrat eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Montserrat. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404254673","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$15.90","perday":"$0.53/day","id":"3312404254680","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$23.90","perday":"$0.80/day","id":"3312404254697","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$45.90","perday":"$1.53/day","id":"3312409183886","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$82.90","perday":"$2.76/day","id":"3312409183893","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$118.90","perday":"$3.96/day","id":"3312409183909","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "saint-barthelemy": {
+        "name": "Saint Barthélemy", "flag": "🇧🇱", "slug": "saint-barthelemy",
+        "desc": "Buy prepaid Saint Barthélemy eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Saint Barthélemy. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312409184876","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312409184883","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312409184890","calls":False},
+            {"label":"6 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"5052503100041","calls":True,"badge":"Popular"},
+            {"label":"12 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"5052503100034","calls":True},
+            {"label":"18 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"5052503100027","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"5052503100010","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "saint-kitts-and-nevis": {
+        "name": "Saint Kitts and Nevis", "flag": "🇰🇳", "slug": "saint-kitts-and-nevis",
+        "desc": "Buy prepaid Saint Kitts and Nevis eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Saint Kitts and Nevis. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312409184944","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$16.90","perday":"$0.56/day","id":"3312409184951","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$25.90","perday":"$0.86/day","id":"3312409184968","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409184975","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$90.90","perday":"$3.03/day","id":"3312409184982","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "saint-lucia": {
+        "name": "Saint Lucia", "flag": "🇱🇨", "slug": "saint-lucia",
+        "desc": "Buy prepaid Saint Lucia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Saint Lucia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312404254611","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$16.90","perday":"$0.56/day","id":"3312404254628","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$25.90","perday":"$0.86/day","id":"3312404254635","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"3312409185019","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$90.90","perday":"$3.03/day","id":"3312409185026","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "saint-martin": {
+        "name": "Saint Martin", "flag": "🇲🇫", "slug": "saint-martin",
+        "desc": "Buy prepaid Saint Martin eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Saint Martin. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312409185057","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312409185064","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312409185071","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312409185088","calls":False,"badge":"Popular"},
+            {"label":"18 GB","days":"30 days","price":"$29.90","perday":"$1.00/day","id":"5052503100027","calls":True},
+            {"label":"30 GB","days":"30 days","price":"$49.90","perday":"$1.66/day","id":"5052503100010","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "turks-and-caicos-islands": {
+        "name": "Turks and Caicos Islands", "flag": "🇹🇨", "slug": "turks-and-caicos-islands",
+        "desc": "Buy prepaid Turks and Caicos Islands eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across the Turks and Caicos Islands. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312404254826","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$16.90","perday":"$0.56/day","id":"3312404254833","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$26.90","perday":"$0.90/day","id":"3312404254840","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$50.90","perday":"$1.70/day","id":"3312409185989","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$92.90","perday":"$3.10/day","id":"3312409185996","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "us-virgin-islands": {
+        "name": "US Virgin Islands", "flag": "🇻🇮", "slug": "us-virgin-islands",
+        "desc": "Buy prepaid US Virgin Islands eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across the US Virgin Islands. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312404252464","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$17.90","perday":"$0.60/day","id":"3312404252471","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$27.90","perday":"$0.93/day","id":"3312404252488","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$51.90","perday":"$1.73/day","id":"3312404252495","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$94.90","perday":"$3.16/day","id":"3312404252501","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "fiji": {
+        "name": "Fiji", "flag": "🇫🇯", "slug": "fiji",
+        "desc": "Buy prepaid Fiji eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Fiji. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405310527","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3352405312231","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$8.90","perday":"$0.30/day","id":"3352405313948","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$17.90","perday":"$0.60/day","id":"3352405315652","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3352405317366","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$44.90","perday":"$1.50/day","id":"3352406130520","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$71.90","perday":"$1.20/day","id":"3352406132234","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "papua-new-guinea": {
+        "name": "Papua New Guinea", "flag": "🇵🇬", "slug": "papua-new-guinea",
+        "desc": "Buy prepaid Papua New Guinea eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Papua New Guinea. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3352405311210","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"3352405312927","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3352405314631","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "guam": {
+        "name": "Guam", "flag": "🇬🇺", "slug": "guam",
+        "desc": "Buy prepaid Guam eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $12.90.",
+        "subtitle": "Stay connected across Guam. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$12.90","perday":"$1.84/day","id":"3312404254529","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$34.90","perday":"$1.16/day","id":"3312404254536","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$55.90","perday":"$1.86/day","id":"3312404254543","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$105.90","perday":"$3.53/day","id":"3312409182230","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "samoa": {
+        "name": "Samoa", "flag": "🇼🇸", "slug": "samoa",
+        "desc": "Buy prepaid Samoa eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $18.90.",
+        "subtitle": "Stay connected across Samoa. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$18.90","perday":"$2.70/day","id":"3312404255311","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$52.90","perday":"$1.76/day","id":"3312404255328","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409185163","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "vanuatu": {
+        "name": "Vanuatu", "flag": "🇻🇺", "slug": "vanuatu",
+        "desc": "Buy prepaid Vanuatu eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $60.90.",
+        "subtitle": "Stay connected across Vanuatu. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$60.90","perday":"$8.70/day","id":"3312404255298","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "tonga": {
+        "name": "Tonga", "flag": "🇹🇴", "slug": "tonga",
+        "desc": "Buy prepaid Tonga eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $43.90.",
+        "subtitle": "Stay connected across Tonga. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$43.90","perday":"$6.27/day","id":"3312404255274","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "nauru": {
+        "name": "Nauru", "flag": "🇳🇷", "slug": "nauru",
+        "desc": "Buy prepaid Nauru eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $48.90.",
+        "subtitle": "Stay connected across Nauru. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$48.90","perday":"$6.99/day","id":"3312404255175","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "kiribati": {
+        "name": "Kiribati", "flag": "🇰🇮", "slug": "kiribati",
+        "desc": "Buy prepaid Kiribati eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $49.90.",
+        "subtitle": "Stay connected across Kiribati. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$49.90","perday":"$7.13/day","id":"3312404255137","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "algeria": {
+        "name": "Algeria", "flag": "🇩🇿", "slug": "algeria",
+        "desc": "Buy prepaid Algeria eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Algeria. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404250064","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3312404250071","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404250088","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404250095","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3312404250101","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3312409180052","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "benin": {
+        "name": "Benin", "flag": "🇧🇯", "slug": "benin",
+        "desc": "Buy prepaid Benin eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $6.90.",
+        "subtitle": "Stay connected across Benin. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$6.90","perday":"$0.99/day","id":"3312404255335","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$16.90","perday":"$0.56/day","id":"3312409180571","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$26.90","perday":"$0.90/day","id":"3312409180588","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$50.90","perday":"$1.70/day","id":"3312409180595","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$92.90","perday":"$3.10/day","id":"3312409180601","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "botswana": {
+        "name": "Botswana", "flag": "🇧🇼", "slug": "botswana",
+        "desc": "Buy prepaid Botswana eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $17.90.",
+        "subtitle": "Stay connected across Botswana. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$17.90","perday":"$2.56/day","id":"3312404255014","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$50.90","perday":"$1.70/day","id":"3312404255021","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$80.90","perday":"$2.70/day","id":"3312409180762","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "burkina-faso": {
+        "name": "Burkina Faso", "flag": "🇧🇫", "slug": "burkina-faso",
+        "desc": "Buy prepaid Burkina Faso eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Burkina Faso. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312409180915","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409180922","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "cabo-verde": {
+        "name": "Cabo Verde", "flag": "🇨🇻", "slug": "cabo-verde",
+        "desc": "Buy prepaid Cabo Verde eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across Cabo Verde. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "cameroon": {
+        "name": "Cameroon", "flag": "🇨🇲", "slug": "cameroon",
+        "desc": "Buy prepaid Cameroon eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $20.90.",
+        "subtitle": "Stay connected across Cameroon. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$20.90","perday":"$2.99/day","id":"3312404255038","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$58.90","perday":"$1.96/day","id":"3312404255045","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$93.90","perday":"$3.13/day","id":"3312409181004","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "central-african-republic": {
+        "name": "Central African Republic", "flag": "🇨🇫", "slug": "central-african-republic",
+        "desc": "Buy prepaid Central African Republic eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across the Central African Republic. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "chad": {
+        "name": "Chad", "flag": "🇹🇩", "slug": "chad",
+        "desc": "Buy prepaid Chad eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Chad. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404251467","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404251474","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$22.90","perday":"$0.76/day","id":"3312404251481","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$42.90","perday":"$1.43/day","id":"3312404251498","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$77.90","perday":"$2.60/day","id":"3312404251504","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$110.90","perday":"$3.70/day","id":"3312409181189","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "equatorial-guinea": {
+        "name": "Equatorial Guinea", "flag": "🇬🇶", "slug": "equatorial-guinea",
+        "desc": "Buy prepaid Equatorial Guinea eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across Equatorial Guinea. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "eswatini": {
+        "name": "Eswatini", "flag": "🇸🇿", "slug": "eswatini",
+        "desc": "Buy prepaid Eswatini eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Eswatini. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312404255397","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409185576","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "ethiopia": {
+        "name": "Ethiopia", "flag": "🇪🇹", "slug": "ethiopia",
+        "desc": "Buy prepaid Ethiopia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across Ethiopia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"10 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Popular"},
+            {"label":"1 GB","days":"7 days","price":"$59.90","perday":"$8.56/day","id":"3312404255489","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "gabon": {
+        "name": "Gabon", "flag": "🇬🇦", "slug": "gabon",
+        "desc": "Buy prepaid Gabon eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Gabon. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404255052","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404255069","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$22.90","perday":"$0.76/day","id":"3312409181899","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$42.90","perday":"$1.43/day","id":"3312409181905","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$77.90","perday":"$2.60/day","id":"3312409181912","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$110.90","perday":"$3.70/day","id":"3312409181929","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "gambia": {
+        "name": "Gambia", "flag": "🇬🇲", "slug": "gambia",
+        "desc": "Buy prepaid Gambia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $35.90.",
+        "subtitle": "Stay connected across Gambia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$35.90","perday":"$5.13/day","id":"3312404255090","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$100.90","perday":"$3.36/day","id":"3312404255106","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "ghana": {
+        "name": "Ghana", "flag": "🇬🇭", "slug": "ghana",
+        "desc": "Buy prepaid Ghana eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Ghana. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3312404250316","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3312404250323","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$9.90","perday":"$0.33/day","id":"3312404250330","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$18.90","perday":"$0.63/day","id":"3312404250347","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$33.90","perday":"$1.13/day","id":"3312404250354","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$47.90","perday":"$1.60/day","id":"3312409182025","calls":False},
+            {"label":"50 GB","days":"30 days","price":"$75.90","perday":"$2.53/day","id":"3312409182025","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "guinea": {
+        "name": "Guinea", "flag": "🇬🇳", "slug": "guinea",
+        "desc": "Buy prepaid Guinea eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Guinea. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312404255342","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409182322","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "guinea-bissau": {
+        "name": "Guinea-Bissau", "flag": "🇬🇼", "slug": "guinea-bissau",
+        "desc": "Buy prepaid Guinea-Bissau eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Guinea-Bissau. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312404255359","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409182384","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "ivory-coast": {
+        "name": "Ivory Coast", "flag": "🇨🇮", "slug": "ivory-coast",
+        "desc": "Buy prepaid Ivory Coast eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Ivory Coast. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312404255366","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409182810","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "lesotho": {
+        "name": "Lesotho", "flag": "🇱🇸", "slug": "lesotho",
+        "desc": "Buy prepaid Lesotho eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $14.90.",
+        "subtitle": "Stay connected across Lesotho. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$14.90","perday":"$2.13/day","id":"3312404255540","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$41.90","perday":"$1.40/day","id":"3312404255557","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$66.90","perday":"$2.23/day","id":"3312404255564","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "liberia": {
+        "name": "Liberia", "flag": "🇱🇷", "slug": "liberia",
+        "desc": "Buy prepaid Liberia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Liberia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312404255373","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409183220","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "madagascar": {
+        "name": "Madagascar", "flag": "🇲🇬", "slug": "madagascar",
+        "desc": "Buy prepaid Madagascar eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.90.",
+        "subtitle": "Stay connected across Madagascar. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.90","perday":"$0.70/day","id":"3312404250712","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3312404250729","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$19.90","perday":"$0.66/day","id":"3312404250736","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$37.90","perday":"$1.26/day","id":"3312404250743","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$68.90","perday":"$2.30/day","id":"3312404250750","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$98.90","perday":"$3.30/day","id":"3312409183367","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "malawi": {
+        "name": "Malawi", "flag": "🇲🇼", "slug": "malawi",
+        "desc": "Buy prepaid Malawi eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Malawi. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404251863","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404251870","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$22.90","perday":"$0.76/day","id":"3312404251887","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$42.90","perday":"$1.43/day","id":"3312404251894","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$77.90","perday":"$2.60/day","id":"3312404251900","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$110.90","perday":"$3.70/day","id":"3312409183381","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "mali": {
+        "name": "Mali", "flag": "🇲🇱", "slug": "mali",
+        "desc": "Buy prepaid Mali eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $29.90.",
+        "subtitle": "Stay connected across Mali. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$29.90","perday":"$4.27/day","id":"3312409183480","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409183497","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "mauritania": {
+        "name": "Mauritania", "flag": "🇲🇷", "slug": "mauritania",
+        "desc": "Buy prepaid Mauritania eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across Mauritania. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"5 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "mauritius": {
+        "name": "Mauritius", "flag": "🇲🇺", "slug": "mauritius",
+        "desc": "Buy prepaid Mauritius eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Mauritius. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3352405310992","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3352405312705","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$22.90","perday":"$0.76/day","id":"3352405314419","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$43.90","perday":"$1.46/day","id":"3352405316123","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$79.90","perday":"$2.66/day","id":"3352405317830","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "mozambique": {
+        "name": "Mozambique", "flag": "🇲🇿", "slug": "mozambique",
+        "desc": "Buy prepaid Mozambique eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $11.90.",
+        "subtitle": "Stay connected across Mozambique. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$11.90","perday":"$1.70/day","id":"3312404255595","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$32.90","perday":"$1.10/day","id":"3312404255601","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$51.90","perday":"$1.73/day","id":"3312404255618","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$99.90","perday":"$3.33/day","id":"3312404255625","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "namibia": {
+        "name": "Namibia", "flag": "🇳🇦", "slug": "namibia",
+        "desc": "Buy prepaid Namibia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $55.90.",
+        "subtitle": "Stay connected across Namibia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$55.90","perday":"$7.99/day","id":"3312404255151","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "niger": {
+        "name": "Niger", "flag": "🇳🇪", "slug": "niger",
+        "desc": "Buy prepaid Niger eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Niger. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404255465","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$15.90","perday":"$0.53/day","id":"3312409184296","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$23.90","perday":"$0.80/day","id":"3312409184302","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$45.90","perday":"$1.53/day","id":"3312409184319","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$82.90","perday":"$2.76/day","id":"3312409184326","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$118.90","perday":"$3.96/day","id":"3312409184333","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "rwanda": {
+        "name": "Rwanda", "flag": "🇷🇼", "slug": "rwanda",
+        "desc": "Buy prepaid Rwanda eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Rwanda. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3352405311326","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3352405313030","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$23.90","perday":"$0.80/day","id":"3352405314747","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$45.90","perday":"$1.53/day","id":"3352405316451","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$82.90","perday":"$2.76/day","id":"3352405318165","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "senegal": {
+        "name": "Senegal", "flag": "🇸🇳", "slug": "senegal",
+        "desc": "Buy prepaid Senegal eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $9.90.",
+        "subtitle": "Stay connected across Senegal. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$9.90","perday":"$1.41/day","id":"3312404254796","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$27.90","perday":"$0.93/day","id":"3312404254802","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$43.90","perday":"$1.46/day","id":"3312404254819","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$83.90","perday":"$2.80/day","id":"3312409185248","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "seychelles": {
+        "name": "Seychelles", "flag": "🇸🇨", "slug": "seychelles",
+        "desc": "Buy prepaid Seychelles eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $33.90.",
+        "subtitle": "Stay connected across Seychelles. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$33.90","perday":"$4.84/day","id":"3312404255212","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$95.90","perday":"$3.20/day","id":"3312404255229","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "sierra-leone": {
+        "name": "Sierra Leone", "flag": "🇸🇱", "slug": "sierra-leone",
+        "desc": "Buy prepaid Sierra Leone eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $39.90.",
+        "subtitle": "Stay connected across Sierra Leone. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"20 GB","days":"31 days","price":"$39.90","perday":"$1.29/day","id":"3561292400796","calls":True,"badge":"Best Value"},
+        ]
+    },
+    "sudan": {
+        "name": "Sudan", "flag": "🇸🇩", "slug": "sudan",
+        "desc": "Buy prepaid Sudan eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $12.90.",
+        "subtitle": "Stay connected across Sudan. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$12.90","perday":"$1.84/day","id":"3312404255236","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$33.90","perday":"$1.13/day","id":"3312404255243","calls":False,"badge":"Popular"},
+            {"label":"5 GB","days":"30 days","price":"$53.90","perday":"$1.80/day","id":"3312409185460","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$102.90","perday":"$3.43/day","id":"3312409185477","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "tanzania": {
+        "name": "Tanzania", "flag": "🇹🇿", "slug": "tanzania",
+        "desc": "Buy prepaid Tanzania eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Tanzania. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404252266","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$13.90","perday":"$0.46/day","id":"3312404252273","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"3312404252280","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$41.90","perday":"$1.40/day","id":"3312404252297","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$75.90","perday":"$2.53/day","id":"3312404252303","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "tunisia": {
+        "name": "Tunisia", "flag": "🇹🇳", "slug": "tunisia",
+        "desc": "Buy prepaid Tunisia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $4.50.",
+        "subtitle": "Stay connected across Tunisia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$4.50","perday":"$0.64/day","id":"3352405311586","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$5.90","perday":"$0.20/day","id":"3352405313290","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$6.90","perday":"$0.23/day","id":"3352405315003","calls":False},
+            {"label":"10 GB","days":"30 days","price":"$12.90","perday":"$0.43/day","id":"3352405316710","calls":False,"badge":"Popular"},
+            {"label":"20 GB","days":"30 days","price":"$24.90","perday":"$0.83/day","id":"3352405318424","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$31.90","perday":"$1.06/day","id":"3352406131589","calls":False},
+            {"label":"50 GB","days":"60 days","price":"$49.90","perday":"$0.83/day","id":"3352406133293","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "uganda": {
+        "name": "Uganda", "flag": "🇺🇬", "slug": "uganda",
+        "desc": "Buy prepaid Uganda eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Uganda. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404252310","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$13.90","perday":"$0.46/day","id":"3312404252327","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$21.90","perday":"$0.73/day","id":"3312404252334","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$40.90","perday":"$1.36/day","id":"3312404252341","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$74.90","perday":"$2.50/day","id":"3312404252358","calls":False},
+            {"label":"30 GB","days":"30 days","price":"$106.90","perday":"$3.56/day","id":"3312409186047","calls":False,"badge":"Best Value"},
+        ]
+    },
+    "zambia": {
+        "name": "Zambia", "flag": "🇿🇲", "slug": "zambia",
+        "desc": "Buy prepaid Zambia eSIM data plans. Instant activation, no roaming fees. Best eSIM deals from $5.90.",
+        "subtitle": "Stay connected across Zambia. Instant activation via QR code — no physical SIM needed.",
+        "compatible": "Works with iPhone XS+, Pixel 3+, Samsung S20+ and most modern phones.",
+        "plans": [
+            {"label":"1 GB","days":"7 days","price":"$5.90","perday":"$0.84/day","id":"3312404254949","calls":False},
+            {"label":"3 GB","days":"30 days","price":"$14.90","perday":"$0.50/day","id":"3312404254956","calls":False},
+            {"label":"5 GB","days":"30 days","price":"$23.90","perday":"$0.80/day","id":"3312404254963","calls":False,"badge":"Popular"},
+            {"label":"10 GB","days":"30 days","price":"$44.90","perday":"$1.50/day","id":"3312409186399","calls":False},
+            {"label":"20 GB","days":"30 days","price":"$80.90","perday":"$2.70/day","id":"3312409186405","calls":False,"badge":"Best Value"},
+        ]
+    },
 }
 
 GTM_SNIPPET = '''  <!-- Google tag (gtag.js) -->
@@ -1136,14 +1902,14 @@ def plan_row(p):
 
 def group_by_validity(plans):
     groups = {}
-    order = []
     for p in plans:
         d = p['days']
         if d not in groups:
             groups[d] = []
-            order.append(d)
         groups[d].append(p)
-    return [(d, groups[d]) for d in order]
+    # Sort by numeric day count ascending (e.g. "3 days" → 3, "30 days" → 30)
+    sorted_keys = sorted(groups.keys(), key=lambda d: int(d.split()[0]))
+    return [(d, groups[d]) for d in sorted_keys]
 
 
 def plans_html(plans):
@@ -1267,16 +2033,24 @@ def generate(slug, c):
   <!-- Hero -->
   <section id="hero" class="relative pt-16">
     <div class="relative overflow-hidden" style="background:linear-gradient(135deg,#e85500 0%,#ff6b1a 40%,#ff9a00 100%)">
-      <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20" style="background:rgba(255,255,255,.25);filter:blur(60px)"></div>
-      <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full opacity-15" style="background:rgba(255,255,255,.3);filter:blur(50px)"></div>
+      <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full" style="background:rgba(255,255,255,.18);filter:blur(60px)"></div>
+      <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full" style="background:rgba(255,255,255,.22);filter:blur(50px)"></div>
       <!-- Decorative geometric shapes (Airalo-style) -->
       <div class="pointer-events-none select-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div class="hidden sm:block absolute top-8 right-10 w-14 h-24 rounded-2xl rotate-[22deg]" style="background:rgba(255,255,255,.13)"></div>
-        <div class="hidden sm:block absolute bottom-8 right-28 w-10 h-10 rounded-xl rotate-[12deg]" style="background:rgba(255,255,255,.10)"></div>
-        <div class="hidden md:block absolute top-10 right-36 w-7 h-7 rotate-45 rounded-md" style="background:rgba(255,255,255,.10)"></div>
-        <div class="hidden sm:block absolute top-16 left-10 w-8 h-8 rotate-45 rounded-md" style="background:rgba(255,255,255,.10)"></div>
-        <div class="hidden sm:block absolute bottom-10 left-16 w-16 h-16 rounded-full" style="background:rgba(255,255,255,.08)"></div>
-        <div class="hidden md:block absolute bottom-4 right-8 w-12 h-20 rounded-2xl -rotate-[15deg]" style="background:rgba(255,255,255,.09)"></div>
+        <!-- Right side shapes -->
+        <div class="hidden sm:block absolute top-6 right-8 w-16 h-28 rounded-3xl rotate-[22deg]" style="background:rgba(255,255,255,.18)"></div>
+        <div class="hidden sm:block absolute top-4 right-28 w-9 h-9 rotate-45 rounded-xl" style="background:rgba(255,255,255,.15)"></div>
+        <div class="hidden md:block absolute top-16 right-48 w-6 h-6 rotate-45 rounded-md" style="background:rgba(255,255,255,.18)"></div>
+        <div class="hidden sm:block absolute bottom-6 right-24 w-12 h-12 rounded-xl rotate-[12deg]" style="background:rgba(255,255,255,.14)"></div>
+        <div class="hidden md:block absolute bottom-3 right-6 w-14 h-24 rounded-3xl -rotate-[18deg]" style="background:rgba(255,255,255,.14)"></div>
+        <!-- Left side shapes -->
+        <div class="hidden sm:block absolute top-8 left-8 w-10 h-10 rotate-45 rounded-xl" style="background:rgba(255,255,255,.15)"></div>
+        <div class="hidden sm:block absolute bottom-8 left-12 w-20 h-20 rounded-full" style="background:rgba(255,255,255,.10)"></div>
+        <div class="hidden md:block absolute top-1/2 left-6 w-7 h-7 rotate-[30deg] rounded-lg" style="background:rgba(255,255,255,.13)"></div>
+        <!-- Floating dots -->
+        <div class="hidden md:block absolute top-12 right-72 w-3 h-3 rounded-full" style="background:rgba(255,255,255,.35)"></div>
+        <div class="hidden md:block absolute bottom-14 right-64 w-2 h-2 rounded-full" style="background:rgba(255,255,255,.40)"></div>
+        <div class="hidden md:block absolute top-20 left-32 w-2.5 h-2.5 rounded-full" style="background:rgba(255,255,255,.30)"></div>
       </div>
       <div class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-20 sm:pb-24 text-center">
         <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
@@ -1448,48 +2222,50 @@ def generate(slug, c):
 
     new IntersectionObserver(function(e){{document.getElementById('navbar').classList.toggle('shadow-sm',!e[0].isIntersecting);}},{{threshold:0}}).observe(document.getElementById('hero'));
 
-    document.addEventListener('DOMContentLoaded', function() {{
-      // Calls & SMS badges
-      document.querySelectorAll('.plan-row[data-calls="1"]').forEach(function(row) {{
-        var wrap = row.querySelector('.flex-1');
-        if (!wrap) return;
-        wrap.classList.add('flex','items-center','gap-2');
-        var b = document.createElement('span');
-        b.className = 'shrink-0 inline-flex items-center gap-1 text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-2 py-0.5 leading-none whitespace-nowrap';
-        b.innerHTML = '<svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Calls & SMS';
-        wrap.appendChild(b);
-      }});
-      // Unlimited / Data toggle
-      window.filterPlanType = function(type) {{
-        document.querySelectorAll('.ptype-btn').forEach(function(btn) {{
-          var active = btn.dataset.ptype === type;
-          btn.classList.toggle('bg-brand-500', active);
-          btn.classList.toggle('text-white', active);
-          btn.classList.toggle('border-brand-500', active);
-          btn.classList.toggle('bg-white', !active);
-          btn.classList.toggle('text-gray-500', !active);
-          btn.classList.toggle('border-gray-200', !active);
-        }});
-        var firstVisible = null;
-        document.querySelectorAll('[data-ptype]').forEach(function(row) {{
-          var show = row.dataset.ptype === type;
-          row.style.display = show ? '' : 'none';
-          if (show && !firstVisible) firstVisible = row;
-        }});
-        document.querySelectorAll('.validity-section').forEach(function(sec) {{
-          var has = Array.from(sec.querySelectorAll('[data-ptype]')).some(function(r){{return r.style.display!=='none';}});
-          sec.style.display = has ? '' : 'none';
-        }});
-        if (firstVisible) selectPlan(firstVisible);
-      }};
-      // Pre-select first data plan (or first plan if no toggle)
-      var tabs = document.getElementById('plan-type-tabs');
-      var first = tabs
-        ? document.querySelector('[data-ptype="data"]')
-        : document.querySelector('.plan-row');
-      if (!first) first = document.querySelector('.plan-row');
-      if (first) selectPlan(first);
+    // Calls & SMS badges — DOM is ready (script is at bottom of body)
+    document.querySelectorAll('.plan-row[data-calls="1"]').forEach(function(row) {{
+      var wrap = row.querySelector('.flex-1');
+      if (!wrap) return;
+      var b = document.createElement('span');
+      b.className = 'shrink-0 inline-flex items-center gap-1 text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-2 py-0.5 leading-none whitespace-nowrap';
+      b.innerHTML = '<svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Calls & SMS';
+      wrap.appendChild(b);
     }});
+
+    // Unlimited / Data toggle — defined globally so onclick attrs can call it immediately
+    function filterPlanType(type) {{
+      document.querySelectorAll('.ptype-btn').forEach(function(btn) {{
+        var active = btn.dataset.ptype === type;
+        btn.classList.toggle('bg-brand-500', active);
+        btn.classList.toggle('text-white', active);
+        btn.classList.toggle('border-brand-500', active);
+        btn.classList.toggle('bg-white', !active);
+        btn.classList.toggle('text-gray-500', !active);
+        btn.classList.toggle('border-gray-200', !active);
+      }});
+      var firstVisible = null;
+      document.querySelectorAll('.plan-row[data-ptype]').forEach(function(row) {{
+        var show = row.dataset.ptype === type;
+        row.style.display = show ? '' : 'none';
+        if (show && !firstVisible) firstVisible = row;
+      }});
+      document.querySelectorAll('.validity-section').forEach(function(sec) {{
+        var hasVisible = Array.from(sec.querySelectorAll('.plan-row[data-ptype]')).some(function(r){{return r.style.display !== 'none';}});
+        sec.style.display = hasVisible ? '' : 'none';
+      }});
+      if (firstVisible) selectPlan(firstVisible);
+    }}
+
+    // Init: if toggle exists, default to Data Plans (hides unlimited rows immediately)
+    (function() {{
+      var tabs = document.getElementById('plan-type-tabs');
+      if (tabs) {{
+        filterPlanType('data');
+      }} else {{
+        var first = document.querySelector('.plan-row');
+        if (first) selectPlan(first);
+      }}
+    }})();
   </script>
 </body>
 </html>'''
