@@ -17,13 +17,13 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWN5WTYV2V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){{dataLayer.push(arguments);}}
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-FWN5WTYV2V', {{
-      linker: {{
+    gtag('config', 'G-FWN5WTYV2V', {
+      linker: {
         domains: ['esim.win', 'simoptions.com']
-      }}
-    }});
+      }
+    });
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -312,14 +312,25 @@
         var price = parseFloat(document.getElementById('bar-price').textContent.replace('$',''));
         gtag('event','begin_checkout',{ currency:'USD', value:price, items:[{ item_id:selectedUrl.split('/').filter(Boolean).pop(), item_name:document.getElementById('bar-label').textContent, item_category:'Burkina Faso eSIM', price:price, currency:'USD', quantity:1 }] });
       }
-      // Use anchor click instead of window.open so GA4 linker appends _gl for cross-domain tracking
-      var a = document.createElement('a');
-      a.href = selectedUrl;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      // Cross-domain tracking: pass GA4 client_id (_ga) + gclid so simoptions.com
+      // can attribute the purchase back to the original Google Ads click.
+      // GA4 linker cannot auto-decorate window.open/programmatic clicks, so we do it manually.
+      var url = selectedUrl;
+      // Extract gclid from _gcl_aw cookie (set automatically by Google Ads auto-tagging)
+      var gclMatch = document.cookie.match(/_gcl_aw=GCL\.\d+\.([^;]+)/);
+      var gclid = gclMatch ? gclMatch[1] : '';
+      function openUrl(clientId) {
+        var params = [];
+        if (clientId) params.push('_ga=' + encodeURIComponent('GA1.1.' + clientId));
+        if (gclid)    params.push('gclid=' + encodeURIComponent(gclid));
+        var sep = url.indexOf('?') !== -1 ? '&' : '?';
+        window.open(params.length ? url + sep + params.join('&') : url, '_blank', 'noopener');
+      }
+      if (typeof gtag === 'function') {
+        gtag('get', 'G-FWN5WTYV2V', 'client_id', openUrl);
+      } else {
+        openUrl('');
+      }
     });
 
     document.getElementById('menu-toggle').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});
