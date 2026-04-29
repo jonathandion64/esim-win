@@ -1853,12 +1853,16 @@ COUNTRIES = {
 }
 
 GTM_SNIPPET = '''  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRL0Z9QHKW"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWN5WTYV2V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
-    gtag('config', 'G-SRL0Z9QHKW');
+    gtag('config', 'G-FWN5WTYV2V', {{
+      linker: {{
+        domains: ['esim.win', 'simoptions.com']
+      }}
+    }});
   </script>'''
 
 NAV_LINKS = '''    <div class="hidden md:flex items-center gap-8">
