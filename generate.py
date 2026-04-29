@@ -1968,6 +1968,9 @@ def generate(slug, c):
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://esim.win/{slug}">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/favicon-192.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 {GTM_SNIPPET}
