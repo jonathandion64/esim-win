@@ -42,6 +42,10 @@
     .rank-2 { border-top: 3px solid #94a3b8; }
     .rank-3 { border-top: 3px solid #e2e8f0; }
     .rank-4 { border-top: 3px solid #e2e8f0; }
+    .pro { display:flex; gap:8px; align-items:flex-start; }
+    .pro::before { content:'✓'; color:#16a34a; font-weight:900; flex-shrink:0; }
+    .con { display:flex; gap:8px; align-items:flex-start; }
+    .con::before { content:'✗'; color:#dc2626; font-weight:900; flex-shrink:0; }
     details summary { list-style: none; }
     details summary::-webkit-details-marker { display: none; }
   </style>
@@ -124,6 +128,26 @@
         <p class="text-sm text-gray-600 leading-snug">
           The only eSIM marketplace — multiple tier-1 carriers (Orange, O2, Bouygues) in one checkout. Plans from <strong>$4.50</strong> with 5G and unlimited options that Airalo can't match.
         </p>
+        <!-- Pros / Cons -->
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Pros</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="pro">Cheapest eSIM prices on the market</div>
+              <div class="pro">Multiple real carriers — not one reseller</div>
+              <div class="pro">Unlimited plans actually available</div>
+              <div class="pro">Calls &amp; SMS on select plans</div>
+              <div class="pro">No hidden fees or throttling</div>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Cons</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="con">Many plan options can feel overwhelming</div>
+              <div class="con">Unlimited plans are 4G (not 5G)</div>
+            </div>
+          </div>
+        </div>
         <!-- Stats -->
         <div class="grid grid-cols-4 gap-2">
           <div class="bg-gray-50 rounded-lg px-2 py-2 text-center">
@@ -183,6 +207,26 @@
         <p class="text-sm text-gray-600 leading-snug">
           Powered by <strong>Bouygues Telecom</strong> — France's #2 carrier, not a reseller. Real 5G, unlimited calls &amp; SMS, and a French phone number included. Best for business travelers.
         </p>
+        <!-- Pros / Cons -->
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Pros</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="pro">Real carrier — not a reseller</div>
+              <div class="pro">5G on every plan</div>
+              <div class="pro">Unlimited calls &amp; SMS (select plans)</div>
+              <div class="pro">French phone number included</div>
+              <div class="pro">EU consumer protections apply</div>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Cons</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="con">Higher starting price</div>
+              <div class="con">No unlimited data plans</div>
+            </div>
+          </div>
+        </div>
         <!-- CTA -->
         <a href="https://international-sim.com"
            class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-lg text-sm transition-all active:scale-95">
@@ -202,10 +246,24 @@
           <span class="bg-orange-400 text-white text-xs font-black px-2 py-0.5 rounded-full ml-auto">7.1/10</span>
         </div>
         <p class="text-xs text-gray-500 leading-snug mb-3">Popular brand — but 87% pricier than SimOptions, no unlimited, no calls or SMS, and slow support. Marketing &gt; quality.</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="badge-warn text-[10px] font-semibold px-2 py-0.5 rounded-full">✗ No unlimited</span>
-          <span class="badge-warn text-[10px] font-semibold px-2 py-0.5 rounded-full">✗ No calls/SMS</span>
-          <span class="badge-warn text-[10px] font-semibold px-2 py-0.5 rounded-full">✗ Overpriced</span>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Pros</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="pro">Well-known brand, polished app</div>
+              <div class="pro">Very wide country coverage</div>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Cons</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="con">Significantly overpriced</div>
+              <div class="con">No unlimited plans</div>
+              <div class="con">No calls or SMS ever</div>
+              <div class="con">Slow support (chat only)</div>
+              <div class="con">Signal degrades in busy areas</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -221,9 +279,24 @@
           <span class="bg-red-500 text-white text-xs font-black px-2 py-0.5 rounded-full ml-auto">6.3/10</span>
         </div>
         <p class="text-xs text-gray-500 leading-snug mb-3">"Unlimited" — but throttled after 1–2GB/day. Fair-use policy hidden in fine print. Speeds can drop to zero. Avoid.</p>
-        <div class="flex flex-wrap gap-1">
-          <span class="badge-warn text-[10px] font-semibold px-2 py-0.5 rounded-full">⚠ Hidden throttling</span>
-          <span class="badge-warn text-[10px] font-semibold px-2 py-0.5 rounded-full">✗ Misleading claims</span>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Pros</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="pro">Simple plan selection</div>
+              <div class="pro">Wide global coverage</div>
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-1.5">Cons</p>
+            <div class="space-y-1 text-sm text-gray-700">
+              <div class="con">"Unlimited" is misleading</div>
+              <div class="con">Throttling not disclosed on pricing page</div>
+              <div class="con">Speed can drop to zero</div>
+              <div class="con">Overpriced for what you get</div>
+              <div class="con">No calls or SMS</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
