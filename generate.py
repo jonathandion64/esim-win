@@ -1860,7 +1860,8 @@ GTM_SNIPPET = '''  <!-- Google tag (gtag.js) -->
     gtag('js', new Date());
     gtag('config', 'G-FWN5WTYV2V', {
       linker: {
-        domains: ['esim.win', 'simoptions.com']
+        accept_incoming: true,
+        domains: ['esim.win', 'simoptions.com', 'www.simoptions.com']
       }
     });
   </script>'''
