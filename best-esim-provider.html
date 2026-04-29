@@ -44,7 +44,7 @@
   <nav class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
     <div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-14">
       <a href="/" class="font-black text-xl tracking-tight">esim<span class="text-brand-500">.win</span></a>
-      <a href="https://www.simoptions.com/?utm_medium=wpam_id_702" class="hidden sm:inline-flex items-center gap-1.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-bold px-4 py-2 rounded-xl transition-all" onclick="trackCta('nav')">Get eSIM →</a>
+      <a href="https://www.simoptions.com" class="hidden sm:inline-flex items-center gap-1.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-bold px-4 py-2 rounded-xl transition-all">Get eSIM →</a>
     </div>
   </nav>
 
@@ -70,7 +70,7 @@
       <div class="flex flex-wrap gap-2">
         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-green-900/60 text-green-300 border border-green-800">✓ Expert tested</span>
         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-green-900/60 text-green-300 border border-green-800">✓ Independently reviewed</span>
-        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-yellow-900/60 text-yellow-300 border border-yellow-800">⚠ Affiliate links</span>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-900/60 text-blue-300 border border-blue-800">✓ No affiliate links</span>
       </div>
     </div>
   </header>
@@ -84,36 +84,44 @@
       </div>
       <div class="divide-y divide-gray-100">
 
-        <div class="px-5 py-3.5 flex items-start gap-3 hover:bg-gray-50 cursor-pointer" onclick="document.getElementById('simoptions').scrollIntoView({behavior:'smooth'})">
-          <div class="w-7 h-7 rounded-full bg-amber-400 flex items-center justify-center font-black text-white text-xs shrink-0 mt-0.5">1</div>
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 flex-wrap mb-1">
-              <span class="font-bold text-sm">SimOptions</span>
-              <span class="score-ring text-white text-xs font-bold px-2 py-0.5 rounded-full">9.7/10</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mb-1.5">
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">🏆 Best overall</span>
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">💰 Budget-friendly</span>
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">🔄 Pay-as-you-go</span>
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">📅 Best daily plans</span>
-            </div>
-            <a href="#simoptions" class="text-xs text-brand-500 font-semibold hover:underline">Skip to review →</a>
+        <!-- #1 SimOptions -->
+        <div class="px-5 py-4">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-7 h-7 rounded-full bg-amber-400 flex items-center justify-center font-black text-white text-xs shrink-0">1</div>
+            <img src="https://www.simoptions.com/wp/wp-content/uploads/2026/02/simoptions_logo_v10.png"
+                 alt="SimOptions" class="h-7 object-contain"
+                 onerror="this.outerHTML='<span class=\'font-black\'>SimOptions</span>'">
+            <span class="score-ring text-white text-xs font-bold px-2 py-0.5 rounded-full ml-auto">9.7/10</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">🏆 Best overall</span>
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">💰 Budget-friendly</span>
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">🔄 Pay-as-you-go</span>
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">📅 Best daily plans</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="https://www.simoptions.com" class="flex-1 text-center bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold py-2 rounded-lg transition-all">Visit SimOptions →</a>
+            <a href="#simoptions" class="flex-1 text-center bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold py-2 rounded-lg transition-all">Read review</a>
           </div>
         </div>
 
-        <div class="px-5 py-3.5 flex items-start gap-3 hover:bg-gray-50 cursor-pointer" onclick="document.getElementById('international-sim').scrollIntoView({behavior:'smooth'})">
-          <div class="w-7 h-7 rounded-full bg-slate-400 flex items-center justify-center font-black text-white text-xs shrink-0 mt-0.5">2</div>
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 flex-wrap mb-1">
-              <span class="font-bold text-sm">International-SIM</span>
-              <span class="score-ring text-white text-xs font-bold px-2 py-0.5 rounded-full">9.4/10</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mb-1.5">
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">⚡ Best high-speed 5G</span>
-              <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">📞 Best for calls &amp; SMS</span>
-            </div>
-            <p class="text-[11px] text-gray-500 mb-1">Powered by <strong>Bouygues Telecom</strong> — France's #2 carrier</p>
-            <a href="#international-sim" class="text-xs text-brand-500 font-semibold hover:underline">Skip to review →</a>
+        <!-- #2 International-SIM -->
+        <div class="px-5 py-4">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-7 h-7 rounded-full bg-slate-400 flex items-center justify-center font-black text-white text-xs shrink-0">2</div>
+            <img src="https://www.international-sim.com/wp/wp-content/themes/simops.upside/img/logo.svg"
+                 alt="International-SIM" class="h-7 object-contain"
+                 onerror="this.outerHTML='<span class=\'font-black\'>International-SIM</span>'">
+            <span class="score-ring text-white text-xs font-bold px-2 py-0.5 rounded-full ml-auto">9.4/10</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-1.5">
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">⚡ Best high-speed 5G</span>
+            <span class="badge-best text-[11px] font-semibold px-2 py-0.5 rounded-full">📞 Best for calls &amp; SMS</span>
+          </div>
+          <p class="text-[11px] text-gray-500 mb-3">Powered by <strong>Bouygues Telecom</strong> — France's #2 carrier</p>
+          <div class="flex items-center gap-2">
+            <a href="https://international-sim.com" class="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition-all">Visit International-SIM →</a>
+            <a href="#international-sim" class="flex-1 text-center bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold py-2 rounded-lg transition-all">Read review</a>
           </div>
         </div>
 
@@ -226,9 +234,8 @@
           <p class="text-sm text-green-900 leading-relaxed">SimOptions is the clear winner. You get real carrier networks at prices 30–50% below the competition, unlimited options, and plans that include calls. The marketplace model means you always get the best operator for your destination.</p>
         </div>
 
-        <a href="https://www.simoptions.com/?utm_medium=wpam_id_702"
-           class="block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-center py-3.5 rounded-xl transition-all active:scale-95 shadow-md shadow-orange-100 text-sm"
-           onclick="trackCta('simoptions')">
+        <a href="https://www.simoptions.com"
+           class="block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold text-center py-3.5 rounded-xl transition-all active:scale-95 shadow-md shadow-orange-100 text-sm">
           Get SimOptions eSIM →
         </a>
         <p class="text-center text-xs text-gray-400">Instant delivery · No contract · 1-year validity</p>
@@ -324,8 +331,7 @@
         </div>
 
         <a href="https://international-sim.com"
-           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-3.5 rounded-xl transition-all active:scale-95 text-sm"
-           onclick="trackCta('international-sim')">
+           class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-center py-3.5 rounded-xl transition-all active:scale-95 text-sm">
           Get International-SIM eSIM →
         </a>
         <p class="text-center text-xs text-gray-400">Powered by Bouygues Telecom · Instant delivery</p>
@@ -546,9 +552,8 @@
     <div class="bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-2xl p-6 text-center">
       <h3 class="text-lg font-extrabold mb-1">Ready to stay connected anywhere?</h3>
       <p class="text-orange-100 text-sm mb-4">Plans from $4.50 · Instant delivery · No contract</p>
-      <a href="https://www.simoptions.com/?utm_medium=wpam_id_702"
-         class="inline-flex items-center gap-2 bg-white text-orange-600 font-extrabold px-7 py-3 rounded-xl text-sm hover:bg-orange-50 transition-all active:scale-95 shadow-lg"
-         onclick="trackCta('banner')">
+      <a href="https://www.simoptions.com"
+         class="inline-flex items-center gap-2 bg-white text-orange-600 font-extrabold px-7 py-3 rounded-xl text-sm hover:bg-orange-50 transition-all active:scale-95 shadow-lg">
         Get My eSIM Now →
       </a>
     </div>
@@ -590,18 +595,13 @@
       </div>
     </div>
 
-    <!-- Disclosure -->
-    <p class="text-xs text-gray-400 leading-relaxed px-1">
-      <strong class="text-gray-500">Affiliate disclosure:</strong> esim.win may earn a commission on purchases made through links on this page at no extra cost to you. This never influences our rankings, which are based solely on independent testing.
-    </p>
-
   </div>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-500 py-8 mt-4">
     <div class="max-w-4xl mx-auto px-4 text-center text-xs">
       <a href="/" class="font-black text-white text-lg">esim<span class="text-brand-500">.win</span></a>
-      <p class="mt-2 text-gray-600 max-w-sm mx-auto">Independent eSIM reviews. Affiliate links support our testing.</p>
+      <p class="mt-2 text-gray-600 max-w-sm mx-auto">Independent eSIM reviews. Tested by real travelers.</p>
       <div class="flex justify-center gap-6 mt-3">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <a href="/france.html" class="hover:text-white transition-colors">France</a>
@@ -613,9 +613,6 @@
   </footer>
 
   <script>
-    function trackCta(label) {
-      if (typeof gtag === 'function') gtag('event', 'cta_click', { event_category: 'best-esim-provider', event_label: label });
-    }
     document.querySelectorAll('a[href*="simoptions.com"]').forEach(function(a) {
       a.addEventListener('click', function(e) {
         e.preventDefault();
