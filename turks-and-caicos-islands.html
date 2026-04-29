@@ -351,24 +351,23 @@
         var price = parseFloat(document.getElementById('bar-price').textContent.replace('$',''));
         gtag('event','begin_checkout',{ currency:'USD', value:price, items:[{ item_id:selectedUrl.split('/').filter(Boolean).pop(), item_name:document.getElementById('bar-label').textContent, item_category:'Turks and Caicos Islands eSIM', price:price, currency:'USD', quantity:1 }] });
       }
-      // Cross-domain tracking: pass GA4 client_id (_ga) + gclid so simoptions.com
-      // can attribute the purchase back to the original Google Ads click.
-      // GA4 linker cannot auto-decorate window.open/programmatic clicks, so we do it manually.
+      // Cross-domain tracking: same-tab navigation so GA4 linker works and
+      // popup blockers can't interfere. Manually append _ga (session continuity)
+      // and gclid (Google Ads attribution) to the simoptions.com URL.
       var url = selectedUrl;
-      // Extract gclid from _gcl_aw cookie (set automatically by Google Ads auto-tagging)
       var gclMatch = document.cookie.match(/_gcl_aw=GCL\.\d+\.([^;]+)/);
       var gclid = gclMatch ? gclMatch[1] : '';
-      function openUrl(clientId) {
+      function goToCheckout(clientId) {
         var params = [];
         if (clientId) params.push('_ga=' + encodeURIComponent('GA1.1.' + clientId));
         if (gclid)    params.push('gclid=' + encodeURIComponent(gclid));
         var sep = url.indexOf('?') !== -1 ? '&' : '?';
-        window.open(params.length ? url + sep + params.join('&') : url, '_blank', 'noopener');
+        window.location.href = params.length ? url + sep + params.join('&') : url;
       }
       if (typeof gtag === 'function') {
-        gtag('get', 'G-FWN5WTYV2V', 'client_id', openUrl);
+        gtag('get', 'G-FWN5WTYV2V', 'client_id', goToCheckout);
       } else {
-        openUrl('');
+        goToCheckout('');
       }
     });
 
