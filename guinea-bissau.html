@@ -317,24 +317,17 @@
         var price = parseFloat(document.getElementById('bar-price').textContent.replace('$',''));
         gtag('event','begin_checkout',{ currency:'USD', value:price, items:[{ item_id:selectedUrl.split('/').filter(Boolean).pop(), item_name:document.getElementById('bar-label').textContent, item_category:'Guinea-Bissau eSIM', price:price, currency:'USD', quantity:1 }] });
       }
-      // Cross-domain tracking: same-tab navigation so GA4 linker works and
-      // popup blockers can't interfere. Manually append _ga (session continuity)
-      // and gclid (Google Ads attribution) to the simoptions.com URL.
+      // Cross-domain: dispatch mousedown so GA4 native linker decorates href with _gl token.
       var url = selectedUrl;
-      var gclMatch = document.cookie.match(/_gcl_aw=GCL\.\d+\.([^;]+)/);
-      var gclid = gclMatch ? gclMatch[1] : '';
-      function goToCheckout(clientId) {
-        var params = [];
-        if (clientId) params.push('_ga=' + encodeURIComponent('GA1.1.' + clientId));
-        if (gclid)    params.push('gclid=' + encodeURIComponent(gclid));
-        var sep = url.indexOf('?') !== -1 ? '&' : '?';
-        window.location.href = params.length ? url + sep + params.join('&') : url;
-      }
-      if (typeof gtag === 'function') {
-        gtag('get', 'G-FWN5WTYV2V', 'client_id', goToCheckout);
-      } else {
-        goToCheckout('');
-      }
+      var tmpA = document.createElement('a');
+      tmpA.href = url;
+      document.body.appendChild(tmpA);
+      tmpA.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+      setTimeout(function() {
+        var finalUrl = tmpA.href;
+        document.body.removeChild(tmpA);
+        window.location.href = finalUrl;
+      }, 200);
     });
 
     document.getElementById('menu-toggle').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});
